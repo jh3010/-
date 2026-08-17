@@ -1,4 +1,4 @@
-"""KBO 분석 디스코드 봇 - 통합 분석 UI 개선판 (Railway 한글 폰트 대응)"""
+"""KBO 분석 디스코드 봇 - 통합 분석 UI 개선판 (Railway 한글 폰트 대응 + 중복 분석 방지)"""
 
 import asyncio
 import datetime
@@ -71,6 +71,9 @@ _ANALYSIS_LOCKS: dict[str, asyncio.Lock] = {}
 _LAST_ANALYSIS_REQUEST: dict[str, float] = {}
 _ANALYSIS_COOLDOWN_SECONDS = 2.0
 MAX_CREDIT_CHARGE = 1000
+
+# ★ 중복 분석 방지용 상태
+_ANALYSIS_IN_PROGRESS: dict[str, bool] = {}
 
 
 # -----------------------------------------------------------------------------
@@ -336,7 +339,6 @@ def get_user_credit_info(user_id: str):
     elif status is not None:
         remaining = status
 
-    # credits_db에서 누적 사용량을 제공하지 않는 경우 현재 로그 파일을 대체값으로 사용
     if total_used in (None, "", "-"):
         total_used = usage_log_count(user_id)
     try:
@@ -357,7 +359,6 @@ def build_my_info_embed(user: discord.abc.User) -> discord.Embed:
         away = log.get("away", "원정")
         home = log.get("home", "홈")
         date = str(log.get("date", ""))
-        # YYYY-MM-DD -> MM-DD
         short_date = date[5:] if len(date) >= 10 else date
         tm = log.get("time", "시간 미정")
         lines.append(f"{away} {home} {short_date} {tm}")
@@ -407,7 +408,6 @@ def find_player_candidates(name: str, team_id: str = None, back_number=None, pla
 
     exact = [p for p in players if str(p.get("playerName", "")).strip() == name and team_match(p) and type_match(p)]
 
-    # 이름 + 팀 + 등번호가 일치하면 사실상 유일 식별자다.
     if target_back:
         numbered = [p for p in exact if str(p.get("backNumber", "")).strip() == target_back]
         if len(numbered) == 1:
@@ -418,7 +418,6 @@ def find_player_candidates(name: str, team_id: str = None, back_number=None, pla
     if exact:
         return exact
 
-    # 팀 코드가 정확한 상태에서 부분 이름 검색.
     partial = [
         p for p in players
         if team_match(p) and type_match(p)
@@ -437,17 +436,16 @@ def find_player_by_name(name: str):
 
 
 # ================================================================
-# ★★ 수정된 한글 폰트 설정 함수 ★★
+# 한글 폰트 설정 함수 (bot.py에서도 사용)
 # ================================================================
 def _configure_korean_matplotlib():
-    """실행 환경에 맞는 한글 폰트를 찾고, 그래프의 모든 텍스트에 직접 적용할 수 있는 FontProperties를 반환한다."""
+    """실행 환경에 맞는 한글 폰트를 찾고, FontProperties를 반환한다."""
     import matplotlib
     from matplotlib import font_manager
 
-    # ★ 추가: 프로젝트 폴더의 NanumGothic.ttf를 가장 먼저 탐색
     local_font = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
     candidates = [
-        local_font,  # 우선순위 1
+        local_font,
         r"C:\Windows\Fonts\malgun.ttf",
         r"C:\Windows\Fonts\malgunsl.ttf",
         r"C:\Windows\Fonts\NanumGothic.ttf",
@@ -459,7 +457,6 @@ def _configure_korean_matplotlib():
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
     ]
 
-    # 시스템 폰트도 추가로 탐색 (Railway 등에서 설치한 폰트)
     try:
         system_fonts = font_manager.findSystemFonts(fontext="ttf") + font_manager.findSystemFonts(fontext="ttc")
         candidates.extend(system_fonts)
@@ -474,7 +471,6 @@ def _configure_korean_matplotlib():
         try:
             font_manager.fontManager.addfont(path)
             prop = font_manager.FontProperties(fname=path)
-            # 그래프 생성 시 기본 폰트 폴백에 맡기지 않고 선택한 폰트를 우선 사용한다.
             matplotlib.rcParams["font.family"] = [prop.get_name()]
             matplotlib.rcParams["font.sans-serif"] = [prop.get_name()]
             matplotlib.rcParams["axes.unicode_minus"] = False
@@ -487,7 +483,6 @@ def _configure_korean_matplotlib():
 
 
 def _apply_font_to_axis(ax, prop, legend=False):
-    """축의 모든 텍스트에 동일한 한글 폰트를 직접 지정한다."""
     if prop is None:
         return
     ax.title.set_fontproperties(prop)
@@ -501,7 +496,6 @@ def _apply_font_to_axis(ax, prop, legend=False):
 
 
 def _save_korean_chart(fig, buf, prop):
-    """폰트를 직접 적용한 뒤 PNG로 저장한다."""
     if prop is not None:
         for ax in fig.axes:
             _apply_font_to_axis(ax, prop, legend=True)
@@ -538,7 +532,6 @@ def _resolve_player_id(player: dict) -> Optional[str]:
         value = first_value(candidates[0].get("playerId"), candidates[0].get("playerID"), candidates[0].get("playerNo"), candidates[0].get("id"))
         return str(value) if value is not None else None
 
-    # 등번호가 누락된 경우 팀+이름+포지션만으로 한 명이면 선택한다.
     candidates = find_player_candidates(name, team_id=team_id, player_type=ptype)
     if len(candidates) == 1:
         value = first_value(candidates[0].get("playerId"), candidates[0].get("playerID"), candidates[0].get("playerNo"), candidates[0].get("id"))
@@ -652,7 +645,6 @@ def recent_wdl(side: dict) -> Tuple[int, int, int]:
         elif result.startswith("L") or "패" in result:
             l += 1
         else:
-            # 결과가 없는 경우 스코어로 계산
             try:
                 h = float(g.get("hScore"))
                 a = float(g.get("aScore"))
@@ -834,7 +826,6 @@ def build_lineup_embed(report: dict) -> discord.Embed:
             order = int_num(b.get("batorder")) or i
             pos = text(b.get("positionName"), "-")
             name = text(b.get("playerName"), "선수")
-            # 가능한 경우 타율/OPS 등도 같은 데이터에서 노출
             avg = first_value(b.get("hra"), b.get("avg"), b.get("battingAverage"))
             ops = first_value(b.get("ops"), b.get("OPS"))
             extra = ""
@@ -904,7 +895,6 @@ def _rule_based_ai_comment(report: dict) -> str:
         rec=f"최근 {recent.get('w',0)}승 {recent.get('d',0)}무 {recent.get('l',0)}패"
         batter_names=', '.join(text(p.get('playerName'),'선수') for p in sort_batters(line_up_players(side))[:5])
         paragraphs.append(f"{team}은 {text(sinfo.get('name'),'선발 미확인')}을 선발로 내세우며 {rec}의 최근 흐름을 보입니다. " + ("주요 지표는 " + ", ".join(strengths) + "이며, " if strengths else "현재 확인 가능한 주요 지표가 제한적이며, ") + f"상위 타선은 {batter_names or '확인되지 않음'} 중심으로 구성됩니다.")
-    # 비교 문단
     wA=(away.get("recentRecord",{}) or {}).get("w",0); wH=(home.get("recentRecord",{}) or {}).get("w",0)
     if wA>wH:
         form=f"최근 흐름만 놓고 보면 {safe_side_name(away)}가 상대적으로 우위입니다."
@@ -1110,12 +1100,10 @@ class PlayerDetailButton(Button):
         self.detail_kind = detail_kind
 
     async def callback(self, interaction: discord.Interaction):
-        # 버튼은 문자열을 다시 복원하지 않고 원본 선수 객체를 직접 사용한다.
         pid = _resolve_player_id(self.player)
         if not pid:
             team_id, back_number, ptype = _player_context(self.player)
             name = str(self.player.get("playerName") or self.player.get("name") or "").strip()
-            # 등번호가 없는 경우에도 팀+이름+포지션으로 재시도
             candidates = find_player_candidates(name, team_id=team_id, back_number=back_number, player_type=ptype)
             if len(candidates) == 1:
                 pid = str(first_value(candidates[0].get("playerId"), candidates[0].get("playerID"), candidates[0].get("playerNo"), candidates[0].get("id")) or "")
@@ -1170,7 +1158,6 @@ class PlayerButtonInfoView(View):
                 for p in (side.get("bullpenAnalysis", []) or [])[:12]:
                     item=dict(p); item["_teamName"]=safe_side_name(side); item["_detail_kind"]="bullpen"; item["_isBullpen"]=True; item["playerType"]="PITCHER"; players.append(item)
             title="불펜 투수 상세 선택"
-        # 실제 버튼을 직접 추가하여 한 View에서 24개까지 표시
         for index, player in enumerate(players[:24]):
             team = str(player.get("_teamName") or "")
             order = player.get("batorder")
@@ -1197,7 +1184,6 @@ class BatterDetailSelect(Select):
                         description="타자 상세 정보",
                     )
                 )
-        # 중복 value 제거 후 최대 25개
         seen = set(); unique = []
         for option in options:
             if option.value not in seen:
@@ -1478,7 +1464,6 @@ async def generate_ai_comment(report: dict) -> str:
     source = build_comment_source_text(report)
     cache_key = _ai_comment_cache_key(report, source)
 
-    # 같은 경기/같은 데이터면 API를 다시 호출하지 않고 캐시를 사용한다.
     async with _AI_COMMENT_CACHE_LOCK:
         cache = _load_ai_comment_cache()
         cached = cache.get(cache_key)
@@ -1487,7 +1472,6 @@ async def generate_ai_comment(report: dict) -> str:
 
     generation_lock = await _get_ai_generation_lock(cache_key)
     async with generation_lock:
-        # 동시에 들어온 요청 중 먼저 생성된 결과를 다시 확인한다.
         async with _AI_COMMENT_CACHE_LOCK:
             cache = _load_ai_comment_cache()
             cached = cache.get(cache_key)
@@ -1538,7 +1522,6 @@ async def generate_ai_comment(report: dict) -> str:
                         "gameId": str(report.get("gameId") or ""),
                         "createdAt": now_kst().isoformat(),
                     }
-                    # 최근 생성 순으로 제한해 무제한 파일 성장을 방지한다.
                     items = sorted(
                         cache.items(),
                         key=lambda item: str((item[1] or {}).get("createdAt", "")),
@@ -2000,6 +1983,87 @@ def published_manual_text(game_id: str) -> str:
     return str(item.get("summary") or "").strip()
 
 
+# ============================================================
+# 중복 분석 방지 확인창 View
+# ============================================================
+class ConfirmAnalysisView(View):
+    def __init__(self, user_id: str, original_interaction: discord.Interaction):
+        super().__init__(timeout=60)
+        self.user_id = user_id
+        self.original_interaction = original_interaction
+
+    @discord.ui.button(label="예, 계속할게요", style=discord.ButtonStyle.green)
+    async def confirm(self, interaction: discord.Interaction, button: Button):
+        _ANALYSIS_IN_PROGRESS[self.user_id] = False
+        await interaction.response.edit_message(content="✅ 새 분석을 시작합니다.", view=None)
+        # 새 분석 시작 (원본 interaction 사용)
+        await start_analysis_logic(self.original_interaction, self.user_id)
+
+    @discord.ui.button(label="아니오, 취소할게요", style=discord.ButtonStyle.red)
+    async def cancel(self, interaction: discord.Interaction, button: Button):
+        _ANALYSIS_IN_PROGRESS[self.user_id] = False
+        await interaction.response.edit_message(content="❌ 분석을 취소했습니다.", view=None)
+
+
+# ============================================================
+# 분석 시작 로직 (분리됨)
+# ============================================================
+async def start_analysis_logic(interaction: discord.Interaction, user_id: str):
+    """실제 분석 시작 처리 (defer + 경기 목록 표시)"""
+    if analysis_rate_limited(user_id):
+        await interaction.response.send_message("잠시 후 다시 시도해주세요.", ephemeral=True)
+        return
+    try:
+        await interaction.response.defer(ephemeral=True)
+    except (discord.NotFound, discord.HTTPException):
+        return
+    lock = await get_analysis_lock(user_id)
+    async with lock:
+        if _ANALYSIS_IN_PROGRESS.get(user_id, False):
+            await interaction.followup.send("이미 분석이 진행 중입니다.", ephemeral=True)
+            return
+        _ANALYSIS_IN_PROGRESS[user_id] = True
+        try:
+            from schedule_data import get_today_games, get_next_available_games
+            games = get_today_games()
+            target_date = today_iso()
+            if not games:
+                games, target_date = get_next_available_games(max_days=7)
+            if not games:
+                await interaction.followup.send("오늘 및 앞으로 7일 동안 예정된 KBO 경기를 찾을 수 없습니다.", ephemeral=True)
+                _ANALYSIS_IN_PROGRESS[user_id] = False
+                return
+            selectable = [g for g in games if game_status_text(g) != "CANCEL"]
+            lines = []
+            for g in games[:10]:
+                away, home = game_team_names(g)
+                status = game_status_text(g)
+                suffix = " · 취소" if status == "CANCEL" else (" · 경기 진행 중" if status == "LIVE" else (" · 경기 종료" if status == "END" else ""))
+                lines.append(f"**{away} @ {home}** — {format_game_datetime(g)}{suffix}")
+            title = "오늘의 KBO 경기" if target_date == today_iso() else f"{target_date} KBO 경기"
+            prefix = "" if target_date == today_iso() else f"오늘({today_iso()}) 경기가 없어 {target_date} 경기를 표시합니다.\n\n"
+            embed = discord.Embed(title=title, description=prefix + "\n".join(lines) + "\n\n분석할 경기를 선택하세요.", color=discord.Color.from_rgb(24, 36, 52))
+            if not selectable:
+                await interaction.followup.send(embed=embed, ephemeral=True)
+                _ANALYSIS_IN_PROGRESS[user_id] = False
+                return
+            # GameSelectView에 user_id 전달하여 분석 완료 시 상태 해제 가능하도록
+            view = GameSelectView(selectable, created_date=today_kst(), user_id=user_id)
+            await interaction.followup.send(embed=embed, view=view, ephemeral=True)
+        except Exception as e:
+            import traceback
+            print(f"[경기 선택창 오류] {type(e).__name__}: {e}")
+            traceback.print_exc()
+            _ANALYSIS_IN_PROGRESS[user_id] = False
+            try:
+                await interaction.followup.send(f"경기 정보를 불러오는 중 오류가 발생했습니다.\n{type(e).__name__}: {e}", ephemeral=True)
+            except Exception:
+                pass
+
+
+# ============================================================
+# MatchupMenuView (이전과 동일)
+# ============================================================
 class MatchupMenuView(View):
     def __init__(self, report: dict, created_date: Optional[datetime.date] = None):
         super().__init__(timeout=None)
@@ -2090,6 +2154,9 @@ class MatchupMenuView(View):
         await interaction.response.defer()
         try:
             embed, buf = _analysis_embed(self.report, "hitter", recent=False)
+            if buf is None:
+                await interaction.edit_original_response(embed=embed, view=self)
+                return
             file = discord.File(buf, filename="kbo_hitter_analysis.png")
             embed.set_image(url="attachment://kbo_hitter_analysis.png")
             await interaction.edit_original_response(embed=embed, view=self, attachments=[file])
@@ -2104,6 +2171,9 @@ class MatchupMenuView(View):
         await interaction.response.defer()
         try:
             embed, buf = _analysis_embed(self.report, "hitter", recent=True)
+            if buf is None:
+                await interaction.edit_original_response(embed=embed, view=self)
+                return
             file = discord.File(buf, filename="kbo_hitter_analysis.png")
             embed.set_image(url="attachment://kbo_hitter_analysis.png")
             await interaction.edit_original_response(embed=embed, view=self, attachments=[file])
@@ -2118,6 +2188,9 @@ class MatchupMenuView(View):
         await interaction.response.defer()
         try:
             embed, buf = _analysis_embed(self.report, "pitcher", recent=False)
+            if buf is None:
+                await interaction.edit_original_response(embed=embed, view=self)
+                return
             file = discord.File(buf, filename="kbo_pitcher_analysis.png")
             embed.set_image(url="attachment://kbo_pitcher_analysis.png")
             await interaction.edit_original_response(embed=embed, view=self, attachments=[file])
@@ -2132,6 +2205,9 @@ class MatchupMenuView(View):
         await interaction.response.defer()
         try:
             embed, buf = _analysis_embed(self.report, "pitcher", recent=True)
+            if buf is None:
+                await interaction.edit_original_response(embed=embed, view=self)
+                return
             file = discord.File(buf, filename="kbo_pitcher_analysis.png")
             embed.set_image(url="attachment://kbo_pitcher_analysis.png")
             await interaction.edit_original_response(embed=embed, view=self, attachments=[file])
@@ -2308,8 +2384,9 @@ class MatchupMenuView(View):
 # 경기 선택
 # -----------------------------------------------------------------------------
 class GameSelect(Select):
-    def __init__(self, games: List[dict]):
+    def __init__(self, games: List[dict], user_id: str):
         self.games = games
+        self.user_id = user_id
         options = []
         for idx, g in enumerate(games[:25]):
             away, home = game_team_names(g)
@@ -2345,7 +2422,7 @@ class GameSelect(Select):
             await interaction.response.send_message("잘못된 경기 선택입니다. 다시 경기 분석을 시작해주세요.", ephemeral=True)
             return
 
-        discord_id = str(interaction.user.id)
+        discord_id = self.user_id  # 저장된 user_id 사용
         lock = await get_analysis_lock(discord_id)
         async with lock:
             if view.consumed:
@@ -2369,24 +2446,30 @@ class GameSelect(Select):
                         embed=None,
                         view=None,
                     )
+                    _ANALYSIS_IN_PROGRESS[discord_id] = False
                     return
                 view.consumed = True
                 record_usage_log(discord_id, away, home, str(date), str(time_text))
                 embed = build_matchup_summary_embed(report)
                 matchup_view = MatchupMenuView(report, created_date=today_kst())
                 await interaction.edit_original_response(content=None, embed=embed, view=matchup_view)
+                # 분석 완료 -> 상태 해제
+                _ANALYSIS_IN_PROGRESS[discord_id] = False
             except MatchupReportError as e:
                 await interaction.edit_original_response(content=f"분석 실패: {e}", embed=None, view=None)
+                _ANALYSIS_IN_PROGRESS[discord_id] = False
             except Exception:
                 await interaction.edit_original_response(content="경기 분석 자료를 불러오는 중 오류가 발생했습니다.", embed=None, view=None)
+                _ANALYSIS_IN_PROGRESS[discord_id] = False
 
 
 class GameSelectView(View):
-    def __init__(self, games: List[dict], created_date: Optional[datetime.date] = None):
+    def __init__(self, games: List[dict], created_date: Optional[datetime.date] = None, user_id: str = None):
         super().__init__(timeout=None)
         self.created_date = created_date or today_kst()
         self.consumed = False
-        self.add_item(GameSelect(games))
+        self.user_id = user_id
+        self.add_item(GameSelect(games, user_id))
 
 
 async def get_analysis_lock(user_id: str) -> asyncio.Lock:
@@ -2415,47 +2498,21 @@ class StartView(View):
 
     @discord.ui.button(label="경기 분석 시작", style=discord.ButtonStyle.secondary, custom_id="kbo_panel_use")
     async def use_button(self, interaction: discord.Interaction, button: Button):
-        discord_id = str(interaction.user.id)
-        if analysis_rate_limited(discord_id):
-            await interaction.response.send_message("잠시 후 다시 시도해주세요.", ephemeral=True)
+        user_id = str(interaction.user.id)
+
+        # 이미 분석 중인지 확인
+        if _ANALYSIS_IN_PROGRESS.get(user_id, False):
+            # 확인창 띄우기
+            view = ConfirmAnalysisView(user_id, interaction)
+            await interaction.response.send_message(
+                "⚠️ 이미 분석이 진행 중입니다. 새로 시작하시겠습니까? (기존 분석은 취소됩니다.)",
+                view=view,
+                ephemeral=True
+            )
             return
-        try:
-            await interaction.response.defer(ephemeral=True)
-        except (discord.NotFound, discord.HTTPException):
-            return
-        lock = await get_analysis_lock(discord_id)
-        async with lock:
-            try:
-                from schedule_data import get_today_games, get_next_available_games
-                games = get_today_games()
-                target_date = today_iso()
-                if not games:
-                    games, target_date = get_next_available_games(max_days=7)
-                if not games:
-                    await interaction.followup.send("오늘 및 앞으로 7일 동안 예정된 KBO 경기를 찾을 수 없습니다.", ephemeral=True)
-                    return
-                selectable = [g for g in games if game_status_text(g) != "CANCEL"]
-                lines = []
-                for g in games[:10]:
-                    away, home = game_team_names(g)
-                    status = game_status_text(g)
-                    suffix = " · 취소" if status == "CANCEL" else (" · 경기 진행 중" if status == "LIVE" else (" · 경기 종료" if status == "END" else ""))
-                    lines.append(f"**{away} @ {home}** — {format_game_datetime(g)}{suffix}")
-                title = "오늘의 KBO 경기" if target_date == today_iso() else f"{target_date} KBO 경기"
-                prefix = "" if target_date == today_iso() else f"오늘({today_iso()}) 경기가 없어 {target_date} 경기를 표시합니다.\n\n"
-                embed = discord.Embed(title=title, description=prefix + "\n".join(lines) + "\n\n분석할 경기를 선택하세요.", color=discord.Color.from_rgb(24, 36, 52))
-                if not selectable:
-                    await interaction.followup.send(embed=embed, ephemeral=True)
-                    return
-                await interaction.followup.send(embed=embed, view=GameSelectView(selectable, created_date=today_kst()), ephemeral=True)
-            except Exception as e:
-                import traceback
-                print(f"[경기 선택창 오류] {type(e).__name__}: {e}")
-                traceback.print_exc()
-                try:
-                    await interaction.followup.send(f"경기 정보를 불러오는 중 오류가 발생했습니다.\n{type(e).__name__}: {e}", ephemeral=True)
-                except Exception:
-                    pass
+
+        # 분석 시작
+        await start_analysis_logic(interaction, user_id)
 
     @discord.ui.button(label="내 정보", style=discord.ButtonStyle.secondary, custom_id="kbo_panel_info")
     async def info_button(self, interaction: discord.Interaction, button: Button):
@@ -2559,7 +2616,6 @@ async def refresh_saved_panel():
 
 @bot.event
 async def on_ready():
-    # 재시작 후에도 고정 패널/티켓 버튼 유지
     bot.add_view(StartView())
     bot.add_view(TicketCloseView())
     await refresh_saved_panel()
@@ -2676,7 +2732,6 @@ async def player_command(ctx, *, name: str = None):
 @bot.command(name="수동분석")
 @commands.has_permissions(administrator=True)
 async def manual_analysis_command(ctx):
-    """관리자 전용 수동 분석 작성 화면."""
     try:
         from schedule_data import get_today_games, get_next_available_games
         games = get_today_games()
@@ -2751,7 +2806,6 @@ if not TOKEN:
 TOKEN = os.getenv("DISCORD_TOKEN") 
 
 if not TOKEN:
-    # 이 에러가 뜨면 Railway 대시보드에 DISCORD_TOKEN을 안 넣은 것입니다.
     raise RuntimeError("DISCORD_TOKEN 환경변수가 없습니다.")
 
 bot.run(TOKEN)
