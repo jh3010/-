@@ -22,7 +22,7 @@ else:
 
 plt.rcParams['axes.unicode_minus'] = False
 
-# 2. 그래프 생성 함수들 (이후 코드는 동일)
+
 def make_starter_comparison_chart(report: dict) -> io.BytesIO:
     away = report["away"]
     home = report["home"]
@@ -96,7 +96,7 @@ def make_recent_games_chart(report: dict) -> io.BytesIO:
     plt.tight_layout()
 
     buf = io.BytesIO()
-    fig.savefig(buf, format="png", dpi=120, bbox_inches="tight")
+    fig.savefig(buf, format="png", dpi=120, dpi=120, bbox_inches="tight")
     plt.close(fig)
     buf.seek(0)
     return buf
