@@ -582,7 +582,7 @@ def _chart_buffer(title: str, labels: List[str], values: List[float], ylabel: st
 
     fig, ax = plt.subplots(figsize=(9, 5), dpi=160)
     bars = ax.bar(labels, values)
-    ax.set_title(title, fontsize=14, fontweight="bold", fontproperties=prop)
+    ax.set_title(title, fontsize=14, fontproperties=prop)
     ax.set_ylabel(ylabel, fontproperties=prop)
     ax.grid(axis="y", alpha=0.2)
     for bar, value in zip(bars, values):
@@ -1705,7 +1705,7 @@ def make_radar_chart(report: dict) -> io.BytesIO:
     ax.set_xticks(angles[:-1])
     ax.set_xticklabels(categories, fontproperties=prop)
     ax.set_yticklabels([])
-    ax.set_title("종합 지표 비교", fontproperties=prop, fontsize=14, fontweight="bold", pad=20)
+    ax.set_title("종합 지표 비교", fontproperties=prop, fontsize=14, pad=20)
     ax.legend(loc="upper right", bbox_to_anchor=(1.35, 1.1), prop=prop)
     fig.tight_layout()
     buf=io.BytesIO()

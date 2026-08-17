@@ -994,7 +994,6 @@ def _analysis_embed(
             f"타자 OPS 비교 · {period}",
             fontproperties=prop,
             fontsize=15,
-            fontweight="bold",
         )
 
     else:
@@ -1007,7 +1006,6 @@ def _analysis_embed(
             f"중계투수 WHIP 비교 · {period}",
             fontproperties=prop,
             fontsize=15,
-            fontweight="bold",
         )
 
     ax.grid(
