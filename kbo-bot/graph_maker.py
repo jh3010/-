@@ -1,12 +1,23 @@
+import os
+import io
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import io
+import matplotlib.font_manager as fm
 
-plt.rcParams["font.family"] = "Malgun Gothic"
-plt.rcParams["axes.unicode_minus"] = False
+# 1. 폰트 설정 (서버 환경 고려)
+font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
 
+if os.path.exists(font_path):
+    fm.fontManager.addfont(font_path)
+    plt.rcParams['font.family'] = fm.FontProperties(fname=font_path).get_name()
+else:
+    # 폰트 파일이 없을 경우 대비
+    plt.rcParams['font.family'] = 'sans-serif'
 
+plt.rcParams['axes.unicode_minus'] = False
+
+# 2. 그래프 생성 함수들
 def make_starter_comparison_chart(report: dict) -> io.BytesIO:
     away = report["away"]
     home = report["home"]

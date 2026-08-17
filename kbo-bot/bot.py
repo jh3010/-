@@ -2751,7 +2751,7 @@ async def matchup_command(ctx, team_a: str = None, team_b: str = None, date: str
 if not TOKEN:
     raise RuntimeError("DISCORD_TOKEN 환경변수가 없습니다.")
 
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN") 
 
 if not TOKEN:
     # 이 에러가 뜨면 Railway 대시보드에 DISCORD_TOKEN을 안 넣은 것입니다.
