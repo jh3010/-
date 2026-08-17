@@ -5,24 +5,24 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-# 1. 폰트 파일 존재 여부 검증 및 객체 생성
+# 1. 폰트 경로 설정 및 캐시 강제 갱신
 font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
 
 if os.path.exists(font_path):
-    print(f"SUCCESS: 폰트 파일을 찾았습니다 -> {font_path}")
+    # Matplotlib 폰트 리스트에 직접 강제 추가
     fm.fontManager.addfont(font_path)
     font_prop = fm.FontProperties(fname=font_path)
     font_name = font_prop.get_name()
     
+    # 전역 폰트 패밀리 강제 지정
     plt.rcParams['font.family'] = font_name
     plt.rcParams['font.sans-serif'] = [font_name]
+    print(f" 성공: 폰트 로드 완료 ({font_name})")
 else:
-    print(f"ERROR: 폰트 파일을 찾을 수 없습니다 -> {font_path}")
-    font_prop = None
+    print(f" 에러: 폰트 파일을 찾을 수 없습니다 -> {font_path}")
     plt.rcParams['font.family'] = 'sans-serif'
 
 plt.rcParams['axes.unicode_minus'] = False
-
 
 def make_starter_comparison_chart(report: dict) -> io.BytesIO:
     away = report["away"]
