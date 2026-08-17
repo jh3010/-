@@ -1,26 +1,25 @@
 import os
-import io
+import io  # <-- 이 부분이 반드시 있어야 합니다!
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-# 1. 폰트 경로 설정 및 캐시 강제 갱신
+# 1. 폰트 강제 지정 (매번 그래프를 그릴 때 확실하게 밀어넣기)
 font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
-
 if os.path.exists(font_path):
-    # Matplotlib 폰트 리스트에 직접 강제 추가
     fm.fontManager.addfont(font_path)
     font_prop = fm.FontProperties(fname=font_path)
-    font_name = font_prop.get_name()
-    
-    # 전역 폰트 패밀리 강제 지정
-    plt.rcParams['font.family'] = font_name
-    plt.rcParams['font.sans-serif'] = [font_name]
-    print(f" 성공: 폰트 로드 완료 ({font_name})")
+    plt.rcParams['font.family'] = font_prop.get_name()
 else:
-    print(f" 에러: 폰트 파일을 찾을 수 없습니다 -> {font_path}")
-    plt.rcParams['font.family'] = 'sans-serif'
+    # 혹시 상위 폴더에 있는 경우 대비
+    parent_font_path = os.path.join(os.path.dirname(__file__), '..', 'NanumGothic.ttf')
+    if os.path.exists(parent_font_path):
+        fm.fontManager.add_font(parent_font_path)
+        font_prop = fm.FontProperties(fname=parent_font_path)
+        plt.rcParams['font.family'] = font_prop.get_name()
+    else:
+        font_prop = None
 
 plt.rcParams['axes.unicode_minus'] = False
 
@@ -59,6 +58,7 @@ def make_starter_comparison_chart(report: dict) -> io.BytesIO:
         ax.set_title(metric, fontsize=11, **title_kwargs)
         
         if font_prop:
+            ax.set_xticks([0, 1])
             ax.set_xticklabels([away_name, home_name], fontproperties=font_prop)
             
         for bar in bars:
