@@ -10,6 +10,32 @@ from team_style import get_team_color
 
 _CACHE = {}
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+# 1. 폰트 파일 강제 로드 및 설정
+font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
+if os.path.exists(font_path):
+    fm.fontManager.addfont(font_path)
+    font_prop = fm.FontProperties(fname=font_path)
+    font_name = font_prop.get_name()
+    plt.rcParams['font.family'] = font_name
+    plt.rcParams['font.sans-serif'] = [font_name]
+else:
+    parent_font_path = os.path.join(os.path.dirname(__file__), '..', 'NanumGothic.ttf')
+    if os.path.exists(parent_font_path):
+        fm.fontManager.addfont(parent_font_path)
+        font_prop = fm.FontProperties(fname=parent_font_path)
+        font_name = font_prop.get_name()
+        plt.rcParams['font.family'] = font_name
+        plt.rcParams['font.sans-serif'] = [font_name]
+    else:
+        font_prop = None
+        plt.rcParams['font.family'] = 'sans-serif'
+
+plt.rcParams['axes.unicode_minus'] = False
 
 # ============================================================
 # 기본 유틸

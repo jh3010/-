@@ -1,27 +1,35 @@
 import os
-import io  # <-- 이 부분이 반드시 있어야 합니다!
+import io
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-# 1. 폰트 강제 지정 (매번 그래프를 그릴 때 확실하게 밀어넣기)
+# 1. 폰트 파일 존재 여부 검증 및 객체 생성
 font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
+
 if os.path.exists(font_path):
     fm.fontManager.addfont(font_path)
     font_prop = fm.FontProperties(fname=font_path)
-    plt.rcParams['font.family'] = font_prop.get_name()
+    font_name = font_prop.get_name()
+    
+    plt.rcParams['font.family'] = font_name
+    plt.rcParams['font.sans-serif'] = [font_name]
 else:
-    # 혹시 상위 폴더에 있는 경우 대비
+    # 상위 폴더에 있는 경우 대비
     parent_font_path = os.path.join(os.path.dirname(__file__), '..', 'NanumGothic.ttf')
     if os.path.exists(parent_font_path):
-        fm.fontManager.add_font(parent_font_path)
+        fm.fontManager.addfont(parent_font_path)
         font_prop = fm.FontProperties(fname=parent_font_path)
-        plt.rcParams['font.family'] = font_prop.get_name()
+        font_name = font_prop.get_name()
+        plt.rcParams['font.family'] = font_name
+        plt.rcParams['font.sans-serif'] = [font_name]
     else:
         font_prop = None
+        plt.rcParams['font.family'] = 'sans-serif'
 
 plt.rcParams['axes.unicode_minus'] = False
+
 
 def make_starter_comparison_chart(report: dict) -> io.BytesIO:
     away = report["away"]
