@@ -1,15 +1,4 @@
-"""KBO 분석 디스코드 봇 - 통합 분석 UI 개선판
-
-주요 개선
-- 경기 선택 시 날짜/요일/시각/구장 표시
-- 모든 주요 View를 무제한(timeout=None)으로 변경
-- 한국시간(KST) 기준 날짜가 바뀌면 기존 분석 세션을 자동으로 오늘 경기 선택 화면으로 리셋
-- 라인업을 1~9번 타순 중심으로 표시하고 타자 선택 -> 선수 상세 조회
-- 불펜을 최근 등판 수/등판 이닝 기준으로 정렬
-- 결장자 / 경기 코멘트 / 분석 자료가 report에 존재할 경우 자동 표시
-- 상대전적, 최근 경기 W/D/L, 홈/원정 승률, 선발 비교, 팀 ERA/타율 등 그래프 제공
-- 기존 크레딧/티켓/!선수/!분석 기능 유지
-"""
+"""KBO 분석 디스코드 봇 - 통합 분석 UI 개선판 (Railway 한글 폰트 대응)"""
 
 import asyncio
 import datetime
@@ -318,12 +307,14 @@ def record_usage_log(user_id: str, away: str, home: str, game_date: str, game_ti
         bucket["logs"] = logs[:5]
         save_usage_logs(data)
 
+
 def usage_log_count(user_id: str) -> int:
     data = load_usage_logs()
     bucket = data.get(str(user_id), {})
     if isinstance(bucket, dict):
         return int(bucket.get("total", len(bucket.get("logs", []))))
     return len(bucket or [])
+
 
 def get_user_credit_info(user_id: str):
     """credits_db의 반환 형태가 달라도 최대한 안전하게 읽는다."""
@@ -386,7 +377,6 @@ def build_my_info_embed(user: discord.abc.User) -> discord.Embed:
     return embed
 
 
-
 # -----------------------------------------------------------------------------
 # 선수 검색
 # -----------------------------------------------------------------------------
@@ -446,12 +436,18 @@ def find_player_by_name(name: str):
     return None
 
 
+# ================================================================
+# ★★ 수정된 한글 폰트 설정 함수 ★★
+# ================================================================
 def _configure_korean_matplotlib():
     """실행 환경에 맞는 한글 폰트를 찾고, 그래프의 모든 텍스트에 직접 적용할 수 있는 FontProperties를 반환한다."""
     import matplotlib
     from matplotlib import font_manager
 
+    # ★ 추가: 프로젝트 폴더의 NanumGothic.ttf를 가장 먼저 탐색
+    local_font = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
     candidates = [
+        local_font,  # 우선순위 1
         r"C:\Windows\Fonts\malgun.ttf",
         r"C:\Windows\Fonts\malgunsl.ttf",
         r"C:\Windows\Fonts\NanumGothic.ttf",
@@ -463,6 +459,7 @@ def _configure_korean_matplotlib():
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
     ]
 
+    # 시스템 폰트도 추가로 탐색 (Railway 등에서 설치한 폰트)
     try:
         system_fonts = font_manager.findSystemFonts(fontext="ttf") + font_manager.findSystemFonts(fontext="ttc")
         candidates.extend(system_fonts)
