@@ -5,19 +5,20 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-# 1. 폰트 설정 (공백 에러 방지 및 확실한 적용)
+# 1. 폰트 파일 존재 여부 검증 및 객체 생성
 font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
 
 if os.path.exists(font_path):
+    print(f"SUCCESS: 폰트 파일을 찾았습니다 -> {font_path}")
     fm.fontManager.addfont(font_path)
     font_prop = fm.FontProperties(fname=font_path)
     font_name = font_prop.get_name()
     
-    # 폰트 패밀리 지정
     plt.rcParams['font.family'] = font_name
     plt.rcParams['font.sans-serif'] = [font_name]
 else:
-    # 폰트 파일이 없을 경우 대비
+    print(f"ERROR: 폰트 파일을 찾을 수 없습니다 -> {font_path}")
+    font_prop = None
     plt.rcParams['font.family'] = 'sans-serif'
 
 plt.rcParams['axes.unicode_minus'] = False
@@ -46,57 +47,30 @@ def make_starter_comparison_chart(report: dict) -> io.BytesIO:
     ]
 
     fig, axes = plt.subplots(1, 3, figsize=(9, 3.5))
-    fig.suptitle(f"선발투수 비교: {away_name} vs {home_name}", fontsize=13)
+    
+    title_kwargs = {"fontproperties": font_prop} if font_prop else {}
+    fig.suptitle(f"선발투수 비교: {away_name} vs {home_name}", fontsize=13, **title_kwargs)
 
     colors = ["#4A90D9", "#D94A4A"]
 
     for i, metric in enumerate(metrics):
         ax = axes[i]
         bars = ax.bar([away_name, home_name], [away_values[i], home_values[i]], color=colors)
-        ax.set_title(metric, fontsize=11)
+        ax.set_title(metric, fontsize=11, **title_kwargs)
+        
+        if font_prop:
+            ax.set_xticklabels([away_name, home_name], fontproperties=font_prop)
+            
         for bar in bars:
             height = bar.get_height()
             ax.text(bar.get_x() + bar.get_width() / 2, height, f"{height:g}",
-                    ha="center", va="bottom", fontsize=9)
+                    ha="center", va="bottom", fontsize=9, **title_kwargs)
         ax.set_ylim(0, max(away_values[i], home_values[i]) * 1.3 + 0.1)
 
     plt.tight_layout()
 
     buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=120, bbox_inches="tight")
-    plt.close(fig)
-    buf.seek(0)
-    return buf
-
-
-def make_recent_games_chart(report: dict) -> io.BytesIO:
-    fig, ax = plt.subplots(figsize=(7, 4))
-
-    for side_key, color in [("away", "#4A90D9"), ("home", "#D94A4A")]:
-        side = report[side_key]
-        team_name = side["standings"].get("name", side_key)
-        games = list(reversed(side["previousGames"]))
-
-        dates = []
-        runs = []
-        for g in games:
-            if g["hName"] == team_name:
-                runs.append(g["hScore"])
-            else:
-                runs.append(g["aScore"])
-            dates.append(str(g["gdate"])[-4:])
-
-        ax.plot(dates, runs, marker="o", label=team_name, color=color, linewidth=2)
-
-    ax.set_title("최근 5경기 득점 흐름", fontsize=13)
-    ax.set_ylabel("득점")
-    ax.legend()
-    ax.grid(alpha=0.3)
-
-    plt.tight_layout()
-
-    buf = io.BytesIO()
-    fig.savefig(buf, format="png", dpi=120, dpi=120, bbox_inches="tight")
     plt.close(fig)
     buf.seek(0)
     return buf
