@@ -1,4 +1,4 @@
-"""KBO 분석 디스코드 봇 - 통합 분석 UI 개선판 (Railway 한글 폰트 대응 + 중복 분석 방지)"""
+"""KBO 분석 디스코드 봇 - 통합 분석 UI 개선판 (Railway 한글 폰트 대응 + 중복 분석 방지 + 블로킹 해결)"""
 
 import asyncio
 import datetime
@@ -72,7 +72,7 @@ _LAST_ANALYSIS_REQUEST: dict[str, float] = {}
 _ANALYSIS_COOLDOWN_SECONDS = 2.0
 MAX_CREDIT_CHARGE = 1000
 
-# ★ 중복 분석 방지용 상태
+# 중복 분석 방지용 상태
 _ANALYSIS_IN_PROGRESS: dict[str, bool] = {}
 
 
@@ -132,7 +132,6 @@ def get_nested(obj: Any, keys: Iterable[str], default: Any = None) -> Any:
 
 
 def find_value_recursive(obj: Any, keys: Iterable[str]) -> Any:
-    """report 구조가 조금 달라도 주요 지표를 최대한 찾아준다."""
     wanted = set(keys)
     if isinstance(obj, dict):
         for k, v in obj.items():
@@ -164,7 +163,6 @@ def session_date_is_today(created_date: datetime.date) -> bool:
 
 
 async def reset_to_today_games(interaction: discord.Interaction) -> bool:
-    """자정이 지나면 기존 화면을 오늘 경기 선택 화면으로 되돌린다."""
     try:
         games = get_today_games()
         if not games:
@@ -265,7 +263,6 @@ def load_usage_logs() -> dict:
 
 
 def save_usage_logs(data: dict):
-    """사용 로그를 원자적으로 저장해 JSON 손상을 줄인다."""
     directory = os.path.dirname(os.path.abspath(USAGE_LOG_FILE)) or "."
     fd, temp_path = tempfile.mkstemp(prefix="usage_logs_", suffix=".tmp", dir=directory)
     try:
@@ -283,7 +280,6 @@ def save_usage_logs(data: dict):
 
 
 def record_usage_log(user_id: str, away: str, home: str, game_date: str, game_time: str):
-    """사용자별 누적 횟수와 최근 5회 로그를 안전하게 기록한다."""
     user_key = str(user_id)
     entry = {
         "away": str(away)[:50],
@@ -320,7 +316,6 @@ def usage_log_count(user_id: str) -> int:
 
 
 def get_user_credit_info(user_id: str):
-    """credits_db의 반환 형태가 달라도 최대한 안전하게 읽는다."""
     try:
         status = get_status(str(user_id))
     except Exception:
@@ -439,7 +434,6 @@ def find_player_by_name(name: str):
 # 한글 폰트 설정 함수 (bot.py에서도 사용)
 # ================================================================
 def _configure_korean_matplotlib():
-    """실행 환경에 맞는 한글 폰트를 찾고, FontProperties를 반환한다."""
     import matplotlib
     from matplotlib import font_manager
 
@@ -1996,7 +1990,6 @@ class ConfirmAnalysisView(View):
     async def confirm(self, interaction: discord.Interaction, button: Button):
         _ANALYSIS_IN_PROGRESS[self.user_id] = False
         await interaction.response.edit_message(content="✅ 새 분석을 시작합니다.", view=None)
-        # 새 분석 시작 (원본 interaction 사용)
         await start_analysis_logic(self.original_interaction, self.user_id)
 
     @discord.ui.button(label="아니오, 취소할게요", style=discord.ButtonStyle.red)
@@ -2009,7 +2002,6 @@ class ConfirmAnalysisView(View):
 # 분석 시작 로직 (분리됨)
 # ============================================================
 async def start_analysis_logic(interaction: discord.Interaction, user_id: str):
-    """실제 분석 시작 처리 (defer + 경기 목록 표시)"""
     if analysis_rate_limited(user_id):
         await interaction.response.send_message("잠시 후 다시 시도해주세요.", ephemeral=True)
         return
@@ -2047,7 +2039,6 @@ async def start_analysis_logic(interaction: discord.Interaction, user_id: str):
                 await interaction.followup.send(embed=embed, ephemeral=True)
                 _ANALYSIS_IN_PROGRESS[user_id] = False
                 return
-            # GameSelectView에 user_id 전달하여 분석 완료 시 상태 해제 가능하도록
             view = GameSelectView(selectable, created_date=today_kst(), user_id=user_id)
             await interaction.followup.send(embed=embed, view=view, ephemeral=True)
         except Exception as e:
@@ -2062,7 +2053,7 @@ async def start_analysis_logic(interaction: discord.Interaction, user_id: str):
 
 
 # ============================================================
-# MatchupMenuView (이전과 동일)
+# MatchupMenuView (블로킹 문제 해결)
 # ============================================================
 class MatchupMenuView(View):
     def __init__(self, report: dict, created_date: Optional[datetime.date] = None):
@@ -2147,13 +2138,14 @@ class MatchupMenuView(View):
     async def team_button(self, interaction: discord.Interaction, button: Button):
         if await self._guard(interaction): await interaction.response.edit_message(embed=build_team_form_embed(self.report),view=self)
 
+    # ★★★ 수정된 부분: asyncio.to_thread 적용 ★★★
     @discord.ui.button(label="타자(시즌전체)", style=discord.ButtonStyle.secondary, custom_id="kbo_match_hitter_season", row=2)
     async def hitter_season_button(self, interaction: discord.Interaction, button: Button):
         if not await self._guard(interaction):
             return
         await interaction.response.defer()
         try:
-            embed, buf = _analysis_embed(self.report, "hitter", recent=False)
+            embed, buf = await asyncio.to_thread(_analysis_embed, self.report, "hitter", False)
             if buf is None:
                 await interaction.edit_original_response(embed=embed, view=self)
                 return
@@ -2170,7 +2162,7 @@ class MatchupMenuView(View):
             return
         await interaction.response.defer()
         try:
-            embed, buf = _analysis_embed(self.report, "hitter", recent=True)
+            embed, buf = await asyncio.to_thread(_analysis_embed, self.report, "hitter", True)
             if buf is None:
                 await interaction.edit_original_response(embed=embed, view=self)
                 return
@@ -2187,7 +2179,7 @@ class MatchupMenuView(View):
             return
         await interaction.response.defer()
         try:
-            embed, buf = _analysis_embed(self.report, "pitcher", recent=False)
+            embed, buf = await asyncio.to_thread(_analysis_embed, self.report, "pitcher", False)
             if buf is None:
                 await interaction.edit_original_response(embed=embed, view=self)
                 return
@@ -2204,7 +2196,7 @@ class MatchupMenuView(View):
             return
         await interaction.response.defer()
         try:
-            embed, buf = _analysis_embed(self.report, "pitcher", recent=True)
+            embed, buf = await asyncio.to_thread(_analysis_embed, self.report, "pitcher", True)
             if buf is None:
                 await interaction.edit_original_response(embed=embed, view=self)
                 return
@@ -2331,7 +2323,7 @@ class MatchupMenuView(View):
         if not await self._guard(interaction): return
         await interaction.response.defer()
         try:
-            buf=make_wdl_graph(self.report)
+            buf=await asyncio.to_thread(make_wdl_graph, self.report)
             file=discord.File(buf,filename="kbo_wdl.png")
             embed=discord.Embed(title="매칭 팀별 승 · 무 · 패",color=discord.Color.dark_gray())
             embed.set_image(url="attachment://kbo_wdl.png")
@@ -2344,7 +2336,7 @@ class MatchupMenuView(View):
         if not await self._guard(interaction): return
         await interaction.response.defer()
         try:
-            buf=make_home_away_winrate_graph(self.report)
+            buf=await asyncio.to_thread(make_home_away_winrate_graph, self.report)
             file=discord.File(buf,filename="kbo_home_away.png")
             embed=discord.Embed(title="홈팀 · 원정팀 승률",color=discord.Color.dark_gray())
             embed.set_image(url="attachment://kbo_home_away.png")
@@ -2358,7 +2350,7 @@ class MatchupMenuView(View):
             return
         await interaction.response.defer()
         try:
-            buf = make_radar_chart(self.report)
+            buf = await asyncio.to_thread(make_radar_chart, self.report)
             file = discord.File(buf, filename="kbo_radar.png")
             embed = discord.Embed(title="종합 지표 레이더", color=discord.Color.dark_gray())
             embed.set_image(url="attachment://kbo_radar.png")
@@ -2371,7 +2363,7 @@ class MatchupMenuView(View):
         if not await self._guard(interaction): return
         await interaction.response.defer()
         try:
-            buf=make_team_metrics_chart(self.report)
+            buf=await asyncio.to_thread(make_team_metrics_chart, self.report)
             file=discord.File(buf,filename="kbo_team_metrics.png")
             embed=discord.Embed(title="팀 평균자책점 · 타율",color=discord.Color.dark_gray())
             embed.set_image(url="attachment://kbo_team_metrics.png")
@@ -2422,7 +2414,7 @@ class GameSelect(Select):
             await interaction.response.send_message("잘못된 경기 선택입니다. 다시 경기 분석을 시작해주세요.", ephemeral=True)
             return
 
-        discord_id = self.user_id  # 저장된 user_id 사용
+        discord_id = self.user_id
         lock = await get_analysis_lock(discord_id)
         async with lock:
             if view.consumed:
@@ -2439,7 +2431,7 @@ class GameSelect(Select):
                 view=None,
             )
             try:
-                report = build_matchup_report(str(date), away, home)
+                report = await asyncio.to_thread(build_matchup_report, str(date), away, home)
                 if not use_credit(discord_id):
                     await interaction.edit_original_response(
                         content="사용 가능 횟수가 없습니다. 구매하기에서 충전해주세요.",
@@ -2453,7 +2445,6 @@ class GameSelect(Select):
                 embed = build_matchup_summary_embed(report)
                 matchup_view = MatchupMenuView(report, created_date=today_kst())
                 await interaction.edit_original_response(content=None, embed=embed, view=matchup_view)
-                # 분석 완료 -> 상태 해제
                 _ANALYSIS_IN_PROGRESS[discord_id] = False
             except MatchupReportError as e:
                 await interaction.edit_original_response(content=f"분석 실패: {e}", embed=None, view=None)
@@ -2500,9 +2491,7 @@ class StartView(View):
     async def use_button(self, interaction: discord.Interaction, button: Button):
         user_id = str(interaction.user.id)
 
-        # 이미 분석 중인지 확인
         if _ANALYSIS_IN_PROGRESS.get(user_id, False):
-            # 확인창 띄우기
             view = ConfirmAnalysisView(user_id, interaction)
             await interaction.response.send_message(
                 "⚠️ 이미 분석이 진행 중입니다. 새로 시작하시겠습니까? (기존 분석은 취소됩니다.)",
@@ -2511,7 +2500,6 @@ class StartView(View):
             )
             return
 
-        # 분석 시작
         await start_analysis_logic(interaction, user_id)
 
     @discord.ui.button(label="내 정보", style=discord.ButtonStyle.secondary, custom_id="kbo_panel_info")
@@ -2776,7 +2764,7 @@ async def matchup_command(ctx, team_a: str = None, team_b: str = None, date: str
         date = date or today_iso()
         await ctx.send(f"{date} {team_a} vs {team_b} 경기 분석 중...")
         try:
-            report = build_matchup_report(date, team_a, team_b)
+            report = await asyncio.to_thread(build_matchup_report, date, team_a, team_b)
         except MatchupReportError as e:
             await ctx.send(f"분석 실패: {e}")
             return
