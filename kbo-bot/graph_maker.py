@@ -5,19 +5,24 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-# 1. 폰트 설정 (서버 환경 고려)
+# 1. 폰트 설정 (공백 에러 방지 및 확실한 적용)
 font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
 
 if os.path.exists(font_path):
     fm.fontManager.addfont(font_path)
-    plt.rcParams['font.family'] = fm.FontProperties(fname=font_path).get_name()
+    font_prop = fm.FontProperties(fname=font_path)
+    font_name = font_prop.get_name()
+    
+    # 폰트 패밀리 지정
+    plt.rcParams['font.family'] = font_name
+    plt.rcParams['font.sans-serif'] = [font_name]
 else:
     # 폰트 파일이 없을 경우 대비
     plt.rcParams['font.family'] = 'sans-serif'
 
 plt.rcParams['axes.unicode_minus'] = False
 
-# 2. 그래프 생성 함수들
+# 2. 그래프 생성 함수들 (이후 코드는 동일)
 def make_starter_comparison_chart(report: dict) -> io.BytesIO:
     away = report["away"]
     home = report["home"]
