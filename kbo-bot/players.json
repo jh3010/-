@@ -1,0 +1,3922 @@
+[
+  {
+    "playerId": "62907",
+    "playerName": "박민우",
+    "teamId": "NC",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "63260",
+    "playerName": "이우성",
+    "teamId": "NC",
+    "backNumber": 55,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51907",
+    "playerName": "김주원",
+    "teamId": "NC",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79215",
+    "playerName": "박건우",
+    "teamId": "NC",
+    "backNumber": 37,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64022",
+    "playerName": "안중열",
+    "teamId": "NC",
+    "backNumber": 22,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67905",
+    "playerName": "천재환",
+    "teamId": "NC",
+    "backNumber": 23,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69992",
+    "playerName": "최정원",
+    "teamId": "NC",
+    "backNumber": 14,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51991",
+    "playerName": "오장한",
+    "teamId": "NC",
+    "backNumber": 65,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64101",
+    "playerName": "한석현",
+    "teamId": "NC",
+    "backNumber": 33,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "63963",
+    "playerName": "권희동",
+    "teamId": "NC",
+    "backNumber": 36,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50092",
+    "playerName": "윤준혁",
+    "teamId": "NC",
+    "backNumber": 31,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56904",
+    "playerName": "허윤",
+    "teamId": "NC",
+    "backNumber": 4,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51344",
+    "playerName": "김휘집",
+    "teamId": "NC",
+    "backNumber": 44,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50996",
+    "playerName": "박시원",
+    "teamId": "NC",
+    "backNumber": 53,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68912",
+    "playerName": "김형준",
+    "teamId": "NC",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50902",
+    "playerName": "김한별",
+    "teamId": "NC",
+    "backNumber": 13,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56950",
+    "playerName": "블레인",
+    "teamId": "NC",
+    "backNumber": 50,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56949",
+    "playerName": "고준휘",
+    "teamId": "NC",
+    "backNumber": 49,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68904",
+    "playerName": "오영수",
+    "teamId": "NC",
+    "backNumber": 34,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69995",
+    "playerName": "서호철",
+    "teamId": "NC",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56909",
+    "playerName": "신재인",
+    "teamId": "NC",
+    "backNumber": 9,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66965",
+    "playerName": "도태훈",
+    "teamId": "NC",
+    "backNumber": 16,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50903",
+    "playerName": "한재환",
+    "teamId": "NC",
+    "backNumber": 35,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51903",
+    "playerName": "김정호",
+    "teamId": "NC",
+    "backNumber": 42,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51996",
+    "playerName": "오태양",
+    "teamId": "NC",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54910",
+    "playerName": "김준원",
+    "teamId": "NC",
+    "backNumber": 15,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53989",
+    "playerName": "신성호",
+    "teamId": "NC",
+    "backNumber": 12,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50600",
+    "playerName": "홍종표",
+    "teamId": "NC",
+    "backNumber": 10,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65933",
+    "playerName": "구창모",
+    "teamId": "NC",
+    "backNumber": 59,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56966",
+    "playerName": "테일러",
+    "teamId": "NC",
+    "backNumber": 66,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56911",
+    "playerName": "토다",
+    "teamId": "NC",
+    "backNumber": 11,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55996",
+    "playerName": "홍재문",
+    "teamId": "NC",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68639",
+    "playerName": "하준영",
+    "teamId": "NC",
+    "backNumber": 29,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65949",
+    "playerName": "류진욱",
+    "teamId": "NC",
+    "backNumber": 41,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53973",
+    "playerName": "목지훈",
+    "teamId": "NC",
+    "backNumber": 20,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51948",
+    "playerName": "이용준",
+    "teamId": "NC",
+    "backNumber": 48,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69962",
+    "playerName": "송명기",
+    "teamId": "NC",
+    "backNumber": 45,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63959",
+    "playerName": "임정호",
+    "teamId": "NC",
+    "backNumber": 30,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54904",
+    "playerName": "손주환",
+    "teamId": "NC",
+    "backNumber": 46,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67954",
+    "playerName": "김진호",
+    "teamId": "NC",
+    "backNumber": 54,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52902",
+    "playerName": "임지민",
+    "teamId": "NC",
+    "backNumber": 19,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55995",
+    "playerName": "김태훈",
+    "teamId": "NC",
+    "backNumber": 69,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50992",
+    "playerName": "김태경",
+    "teamId": "NC",
+    "backNumber": 60,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54906",
+    "playerName": "원종해",
+    "teamId": "NC",
+    "backNumber": 63,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "64995",
+    "playerName": "배재환",
+    "teamId": "NC",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68902",
+    "playerName": "신민혁",
+    "teamId": "NC",
+    "backNumber": 18,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56928",
+    "playerName": "버하겐",
+    "teamId": "NC",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68900",
+    "playerName": "김영규",
+    "teamId": "NC",
+    "backNumber": 17,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69969",
+    "playerName": "전사민",
+    "teamId": "NC",
+    "backNumber": 57,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56967",
+    "playerName": "최요한",
+    "teamId": "NC",
+    "backNumber": 67,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66920",
+    "playerName": "최성영",
+    "teamId": "NC",
+    "backNumber": 26,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54903",
+    "playerName": "최우석",
+    "teamId": "NC",
+    "backNumber": 64,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52992",
+    "playerName": "이준혁",
+    "teamId": "NC",
+    "backNumber": 40,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55903",
+    "playerName": "라일리",
+    "teamId": "NC",
+    "backNumber": 3,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69994",
+    "playerName": "박지한",
+    "teamId": "NC",
+    "backNumber": 56,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53919",
+    "playerName": "신영우",
+    "teamId": "NC",
+    "backNumber": 43,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53554",
+    "playerName": "김민석",
+    "teamId": "OB",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64646",
+    "playerName": "박찬호",
+    "teamId": "OB",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "76232",
+    "playerName": "양의지",
+    "teamId": "OB",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79231",
+    "playerName": "정수빈",
+    "teamId": "OB",
+    "backNumber": 31,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54214",
+    "playerName": "전다민",
+    "teamId": "OB",
+    "backNumber": 9,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54219",
+    "playerName": "류현준",
+    "teamId": "OB",
+    "backNumber": 67,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55252",
+    "playerName": "박준순",
+    "teamId": "OB",
+    "backNumber": 52,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66209",
+    "playerName": "조수행",
+    "teamId": "OB",
+    "backNumber": 51,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69238",
+    "playerName": "김대한",
+    "teamId": "OB",
+    "backNumber": 32,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56251",
+    "playerName": "카메론",
+    "teamId": "OB",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50204",
+    "playerName": "박지훈",
+    "teamId": "OB",
+    "backNumber": 37,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50208",
+    "playerName": "오명진",
+    "teamId": "OB",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53404",
+    "playerName": "류승민",
+    "teamId": "OB",
+    "backNumber": 14,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51203",
+    "playerName": "안재석",
+    "teamId": "OB",
+    "backNumber": 62,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "63123",
+    "playerName": "강승호",
+    "teamId": "OB",
+    "backNumber": 23,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "77532",
+    "playerName": "손아섭",
+    "teamId": "OB",
+    "backNumber": 24,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56236",
+    "playerName": "세베리노",
+    "teamId": "OB",
+    "backNumber": 36,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53296",
+    "playerName": "윤준호",
+    "teamId": "OB",
+    "backNumber": 27,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "63257",
+    "playerName": "김인태",
+    "teamId": "OB",
+    "backNumber": 33,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66112",
+    "playerName": "김기연",
+    "teamId": "OB",
+    "backNumber": 22,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67207",
+    "playerName": "이유찬",
+    "teamId": "OB",
+    "backNumber": 13,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64153",
+    "playerName": "양석환",
+    "teamId": "OB",
+    "backNumber": 53,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54236",
+    "playerName": "임종성",
+    "teamId": "OB",
+    "backNumber": 3,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66233",
+    "playerName": "홍성호",
+    "teamId": "OB",
+    "backNumber": 34,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51230",
+    "playerName": "김동주",
+    "teamId": "OB",
+    "backNumber": 4,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68830",
+    "playerName": "김정우",
+    "teamId": "OB",
+    "backNumber": 16,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51298",
+    "playerName": "박성재",
+    "teamId": "OB",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68249",
+    "playerName": "박신지",
+    "teamId": "OB",
+    "backNumber": 49,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65639",
+    "playerName": "박정수",
+    "teamId": "OB",
+    "backNumber": 17,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55215",
+    "playerName": "양재훈",
+    "teamId": "OB",
+    "backNumber": 30,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52202",
+    "playerName": "윤태호",
+    "teamId": "OB",
+    "backNumber": 65,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52204",
+    "playerName": "이병헌",
+    "teamId": "OB",
+    "backNumber": 29,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66291",
+    "playerName": "이영하",
+    "teamId": "OB",
+    "backNumber": 50,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56215",
+    "playerName": "최주형",
+    "teamId": "OB",
+    "backNumber": 15,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52206",
+    "playerName": "최지강",
+    "teamId": "OB",
+    "backNumber": 42,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68220",
+    "playerName": "곽빈",
+    "teamId": "OB",
+    "backNumber": 47,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55268",
+    "playerName": "최민석",
+    "teamId": "OB",
+    "backNumber": 68,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55239",
+    "playerName": "잭로그",
+    "teamId": "OB",
+    "backNumber": 39,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56218",
+    "playerName": "타무라",
+    "teamId": "OB",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51264",
+    "playerName": "최승용",
+    "teamId": "OB",
+    "backNumber": 28,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50234",
+    "playerName": "플렉센",
+    "teamId": "OB",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56212",
+    "playerName": "타카다",
+    "teamId": "OB",
+    "backNumber": 12,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "77211",
+    "playerName": "이용찬",
+    "teamId": "OB",
+    "backNumber": 45,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53259",
+    "playerName": "최준호",
+    "teamId": "OB",
+    "backNumber": 59,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67266",
+    "playerName": "박치국",
+    "teamId": "OB",
+    "backNumber": 1,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67246",
+    "playerName": "김명신",
+    "teamId": "OB",
+    "backNumber": 46,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55221",
+    "playerName": "김한중",
+    "teamId": "OB",
+    "backNumber": 95,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54263",
+    "playerName": "김택연",
+    "teamId": "OB",
+    "backNumber": 63,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52043",
+    "playerName": "벤자민",
+    "teamId": "OB",
+    "backNumber": 48,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67263",
+    "playerName": "최원준",
+    "teamId": "OB",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53123",
+    "playerName": "오스틴",
+    "teamId": "LG",
+    "backNumber": 23,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62415",
+    "playerName": "박해민",
+    "teamId": "LG",
+    "backNumber": 17,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66108",
+    "playerName": "홍창기",
+    "teamId": "LG",
+    "backNumber": 51,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79109",
+    "playerName": "오지환",
+    "teamId": "LG",
+    "backNumber": 10,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79365",
+    "playerName": "박동원",
+    "teamId": "LG",
+    "backNumber": 27,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52121",
+    "playerName": "문정빈",
+    "teamId": "LG",
+    "backNumber": 56,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68119",
+    "playerName": "문성주",
+    "teamId": "LG",
+    "backNumber": 8,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69100",
+    "playerName": "구본혁",
+    "teamId": "LG",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50054",
+    "playerName": "천성호",
+    "teamId": "LG",
+    "backNumber": 53,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68110",
+    "playerName": "송찬의",
+    "teamId": "LG",
+    "backNumber": 55,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65207",
+    "playerName": "신민재",
+    "teamId": "LG",
+    "backNumber": 4,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68106",
+    "playerName": "이재원",
+    "teamId": "LG",
+    "backNumber": 52,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69102",
+    "playerName": "문보경",
+    "teamId": "LG",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52154",
+    "playerName": "이주헌",
+    "teamId": "LG",
+    "backNumber": 63,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51100",
+    "playerName": "이영빈",
+    "teamId": "LG",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54166",
+    "playerName": "김현종",
+    "teamId": "LG",
+    "backNumber": 66,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52103",
+    "playerName": "최원영",
+    "teamId": "LG",
+    "backNumber": 3,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53103",
+    "playerName": "강민균",
+    "teamId": "LG",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64793",
+    "playerName": "김민수",
+    "teamId": "LG",
+    "backNumber": 62,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69105",
+    "playerName": "김성진",
+    "teamId": "LG",
+    "backNumber": 36,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55167",
+    "playerName": "김영우",
+    "teamId": "LG",
+    "backNumber": 67,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66162",
+    "playerName": "김주성",
+    "teamId": "LG",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55121",
+    "playerName": "박시원",
+    "teamId": "LG",
+    "backNumber": 58,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54156",
+    "playerName": "손용준",
+    "teamId": "LG",
+    "backNumber": 15,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67143",
+    "playerName": "손주영",
+    "teamId": "LG",
+    "backNumber": 29,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51526",
+    "playerName": "우강훈",
+    "teamId": "LG",
+    "backNumber": 20,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63950",
+    "playerName": "장현식",
+    "teamId": "LG",
+    "backNumber": 50,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "61101",
+    "playerName": "임찬규",
+    "teamId": "LG",
+    "backNumber": 1,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55130",
+    "playerName": "톨허스트",
+    "teamId": "LG",
+    "backNumber": 30,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66145",
+    "playerName": "김대현",
+    "teamId": "LG",
+    "backNumber": 12,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56165",
+    "playerName": "양우진",
+    "teamId": "LG",
+    "backNumber": 65,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69168",
+    "playerName": "이상영",
+    "teamId": "LG",
+    "backNumber": 39,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65109",
+    "playerName": "백승현",
+    "teamId": "LG",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68159",
+    "playerName": "성동현",
+    "teamId": "LG",
+    "backNumber": 34,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63145",
+    "playerName": "배재준",
+    "teamId": "LG",
+    "backNumber": 25,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "77263",
+    "playerName": "김강률",
+    "teamId": "LG",
+    "backNumber": 37,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51163",
+    "playerName": "조건희",
+    "teamId": "LG",
+    "backNumber": 48,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52149",
+    "playerName": "조원태",
+    "teamId": "LG",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69134",
+    "playerName": "이정용",
+    "teamId": "LG",
+    "backNumber": 31,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55146",
+    "playerName": "치리노스",
+    "teamId": "LG",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63248",
+    "playerName": "함덕주",
+    "teamId": "LG",
+    "backNumber": 11,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51111",
+    "playerName": "송승기",
+    "teamId": "LG",
+    "backNumber": 13,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50157",
+    "playerName": "김윤식",
+    "teamId": "LG",
+    "backNumber": 47,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "75867",
+    "playerName": "김진성",
+    "teamId": "LG",
+    "backNumber": 42,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55348",
+    "playerName": "웰스",
+    "teamId": "LG",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51154",
+    "playerName": "김진수",
+    "teamId": "LG",
+    "backNumber": 45,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56146",
+    "playerName": "리오스",
+    "teamId": "LG",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50904",
+    "playerName": "이종준",
+    "teamId": "LG",
+    "backNumber": 40,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "61145",
+    "playerName": "이우찬",
+    "teamId": "LG",
+    "backNumber": 21,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "64596",
+    "playerName": "김유영",
+    "teamId": "LG",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56103",
+    "playerName": "카라스코",
+    "teamId": "LG",
+    "backNumber": 59,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50106",
+    "playerName": "유영찬",
+    "teamId": "LG",
+    "backNumber": 54,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50126",
+    "playerName": "이민호",
+    "teamId": "LG",
+    "backNumber": 26,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68419",
+    "playerName": "최지명",
+    "teamId": "LG",
+    "backNumber": 16,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68050",
+    "playerName": "강백호",
+    "teamId": "HH",
+    "backNumber": 50,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52764",
+    "playerName": "허인서",
+    "teamId": "HH",
+    "backNumber": 59,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53764",
+    "playerName": "문현빈",
+    "teamId": "HH",
+    "backNumber": 51,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54730",
+    "playerName": "페라자",
+    "teamId": "HH",
+    "backNumber": 30,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65703",
+    "playerName": "이도윤",
+    "teamId": "HH",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69737",
+    "playerName": "노시환",
+    "teamId": "HH",
+    "backNumber": 8,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64006",
+    "playerName": "심우준",
+    "teamId": "HH",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52769",
+    "playerName": "권광민",
+    "teamId": "HH",
+    "backNumber": 17,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50707",
+    "playerName": "최인호",
+    "teamId": "HH",
+    "backNumber": 41,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66704",
+    "playerName": "김태연",
+    "teamId": "HH",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51762",
+    "playerName": "장규현",
+    "teamId": "HH",
+    "backNumber": 32,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68700",
+    "playerName": "이원석",
+    "teamId": "HH",
+    "backNumber": 37,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79192",
+    "playerName": "채은성",
+    "teamId": "HH",
+    "backNumber": 22,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56754",
+    "playerName": "오재원",
+    "teamId": "HH",
+    "backNumber": 54,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50709",
+    "playerName": "박정현",
+    "teamId": "HH",
+    "backNumber": 63,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54795",
+    "playerName": "황영묵",
+    "teamId": "HH",
+    "backNumber": 95,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66657",
+    "playerName": "이진영",
+    "teamId": "HH",
+    "backNumber": 10,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55767",
+    "playerName": "한지윤",
+    "teamId": "HH",
+    "backNumber": 36,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52765",
+    "playerName": "유민",
+    "teamId": "HH",
+    "backNumber": 65,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78288",
+    "playerName": "최재훈",
+    "teamId": "HH",
+    "backNumber": 13,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68743",
+    "playerName": "정은원",
+    "teamId": "HH",
+    "backNumber": 43,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53754",
+    "playerName": "김서현",
+    "teamId": "HH",
+    "backNumber": 44,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56708",
+    "playerName": "이도훈",
+    "teamId": "HH",
+    "backNumber": 60,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65616",
+    "playerName": "이민우",
+    "teamId": "HH",
+    "backNumber": 27,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "62951",
+    "playerName": "이형범",
+    "teamId": "HH",
+    "backNumber": 16,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51764",
+    "playerName": "정민규",
+    "teamId": "HH",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54768",
+    "playerName": "조동욱",
+    "teamId": "HH",
+    "backNumber": 57,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56793",
+    "playerName": "최유빈",
+    "teamId": "HH",
+    "backNumber": 93,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56760",
+    "playerName": "쿠싱",
+    "teamId": "HH",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56719",
+    "playerName": "왕옌청",
+    "teamId": "HH",
+    "backNumber": 19,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65056",
+    "playerName": "엄상백",
+    "teamId": "HH",
+    "backNumber": 11,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54705",
+    "playerName": "김도빈",
+    "teamId": "HH",
+    "backNumber": 46,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65707",
+    "playerName": "주현상",
+    "teamId": "HH",
+    "backNumber": 66,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50710",
+    "playerName": "김범준",
+    "teamId": "HH",
+    "backNumber": 40,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69205",
+    "playerName": "이교훈",
+    "teamId": "HH",
+    "backNumber": 31,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54702",
+    "playerName": "원종혁",
+    "teamId": "HH",
+    "backNumber": 48,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53706",
+    "playerName": "박재규",
+    "teamId": "HH",
+    "backNumber": 39,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56799",
+    "playerName": "짐머맨",
+    "teamId": "HH",
+    "backNumber": 12,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56769",
+    "playerName": "강건우",
+    "teamId": "HH",
+    "backNumber": 69,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63765",
+    "playerName": "김종수",
+    "teamId": "HH",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55743",
+    "playerName": "정우주",
+    "teamId": "HH",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56709",
+    "playerName": "박준영",
+    "teamId": "HH",
+    "backNumber": 68,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69213",
+    "playerName": "윤산흠",
+    "teamId": "HH",
+    "backNumber": 49,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67703",
+    "playerName": "박상원",
+    "teamId": "HH",
+    "backNumber": 58,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50705",
+    "playerName": "강재민",
+    "teamId": "HH",
+    "backNumber": 55,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52701",
+    "playerName": "문동주",
+    "teamId": "HH",
+    "backNumber": 1,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56712",
+    "playerName": "에르난데스",
+    "teamId": "HH",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65117",
+    "playerName": "이상규",
+    "teamId": "HH",
+    "backNumber": 18,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52731",
+    "playerName": "박준영",
+    "teamId": "HH",
+    "backNumber": 96,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54729",
+    "playerName": "황준서",
+    "teamId": "HH",
+    "backNumber": 29,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55764",
+    "playerName": "권민규",
+    "teamId": "HH",
+    "backNumber": 64,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "76715",
+    "playerName": "류현진",
+    "teamId": "HH",
+    "backNumber": 99,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56724",
+    "playerName": "화이트",
+    "teamId": "HH",
+    "backNumber": 24,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69645",
+    "playerName": "장유호",
+    "teamId": "HH",
+    "backNumber": 28,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "62404",
+    "playerName": "구자욱",
+    "teamId": "SS",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50458",
+    "playerName": "김지찬",
+    "teamId": "SS",
+    "backNumber": 58,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "72443",
+    "playerName": "최형우",
+    "teamId": "SS",
+    "backNumber": 34,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67449",
+    "playerName": "김성윤",
+    "teamId": "SS",
+    "backNumber": 39,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54400",
+    "playerName": "디아즈",
+    "teamId": "SS",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62234",
+    "playerName": "류지혁",
+    "teamId": "SS",
+    "backNumber": 16,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65586",
+    "playerName": "전병우",
+    "teamId": "SS",
+    "backNumber": 61,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51407",
+    "playerName": "이창용",
+    "teamId": "SS",
+    "backNumber": 50,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69418",
+    "playerName": "박승규",
+    "teamId": "SS",
+    "backNumber": 66,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53400",
+    "playerName": "김재상",
+    "teamId": "SS",
+    "backNumber": 14,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51417",
+    "playerName": "김현준",
+    "teamId": "SS",
+    "backNumber": 44,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "74540",
+    "playerName": "강민호",
+    "teamId": "SS",
+    "backNumber": 47,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "61404",
+    "playerName": "김헌곤",
+    "teamId": "SS",
+    "backNumber": 32,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55438",
+    "playerName": "심재훈",
+    "teamId": "SS",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69442",
+    "playerName": "김도환",
+    "teamId": "SS",
+    "backNumber": 24,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52415",
+    "playerName": "이재현",
+    "teamId": "SS",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55425",
+    "playerName": "김상준",
+    "teamId": "SS",
+    "backNumber": 56,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52430",
+    "playerName": "김영웅",
+    "teamId": "SS",
+    "backNumber": 30,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52424",
+    "playerName": "김재혁",
+    "teamId": "SS",
+    "backNumber": 8,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64468",
+    "playerName": "박계범",
+    "teamId": "SS",
+    "backNumber": 9,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62244",
+    "playerName": "박세혁",
+    "teamId": "SS",
+    "backNumber": 52,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69403",
+    "playerName": "양우현",
+    "teamId": "SS",
+    "backNumber": 53,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65040",
+    "playerName": "김태훈",
+    "teamId": "SS",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67005",
+    "playerName": "홍현빈",
+    "teamId": "SS",
+    "backNumber": 51,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "63202",
+    "playerName": "장승현",
+    "teamId": "SS",
+    "backNumber": 46,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66409",
+    "playerName": "이성규",
+    "teamId": "SS",
+    "backNumber": 13,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69416",
+    "playerName": "이해승",
+    "teamId": "SS",
+    "backNumber": 3,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55440",
+    "playerName": "함수호",
+    "teamId": "SS",
+    "backNumber": 40,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65062",
+    "playerName": "김재윤",
+    "teamId": "SS",
+    "backNumber": 62,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68463",
+    "playerName": "윤정빈",
+    "teamId": "SS",
+    "backNumber": 31,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69428",
+    "playerName": "이병헌",
+    "teamId": "SS",
+    "backNumber": 23,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "60146",
+    "playerName": "이승현",
+    "teamId": "SS",
+    "backNumber": 26,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55417",
+    "playerName": "이진용",
+    "teamId": "SS",
+    "backNumber": 64,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62754",
+    "playerName": "임기영",
+    "teamId": "SS",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55435",
+    "playerName": "차승준",
+    "teamId": "SS",
+    "backNumber": 35,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53375",
+    "playerName": "후라도",
+    "teamId": "SS",
+    "backNumber": 75,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56474",
+    "playerName": "사토시",
+    "teamId": "SS",
+    "backNumber": 74,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56469",
+    "playerName": "정재훈",
+    "teamId": "SS",
+    "backNumber": 69,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54404",
+    "playerName": "육선엽",
+    "teamId": "SS",
+    "backNumber": 4,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68403",
+    "playerName": "김무신",
+    "teamId": "SS",
+    "backNumber": 48,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56402",
+    "playerName": "보스",
+    "teamId": "SS",
+    "backNumber": 43,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51454",
+    "playerName": "이승현",
+    "teamId": "SS",
+    "backNumber": 57,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "77446",
+    "playerName": "백정현",
+    "teamId": "SS",
+    "backNumber": 29,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56415",
+    "playerName": "미야지",
+    "teamId": "SS",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56464",
+    "playerName": "오러클린",
+    "teamId": "SS",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65320",
+    "playerName": "최원태",
+    "teamId": "SS",
+    "backNumber": 20,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69446",
+    "playerName": "원태인",
+    "teamId": "SS",
+    "backNumber": 18,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56460",
+    "playerName": "장찬희",
+    "teamId": "SS",
+    "backNumber": 60,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68415",
+    "playerName": "양창섭",
+    "teamId": "SS",
+    "backNumber": 42,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56459",
+    "playerName": "페덱",
+    "teamId": "SS",
+    "backNumber": 59,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "62360",
+    "playerName": "김태훈",
+    "teamId": "SS",
+    "backNumber": 27,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55420",
+    "playerName": "김백산",
+    "teamId": "SS",
+    "backNumber": 63,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51460",
+    "playerName": "이재희",
+    "teamId": "SS",
+    "backNumber": 17,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55455",
+    "playerName": "배찬승",
+    "teamId": "SS",
+    "backNumber": 55,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67421",
+    "playerName": "최지광",
+    "teamId": "SS",
+    "backNumber": 11,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50464",
+    "playerName": "이승민",
+    "teamId": "SS",
+    "backNumber": 28,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56468",
+    "playerName": "박용재",
+    "teamId": "SS",
+    "backNumber": 68,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "61268",
+    "playerName": "양현",
+    "teamId": "SS",
+    "backNumber": 19,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63492",
+    "playerName": "이재익",
+    "teamId": "SS",
+    "backNumber": 45,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54529",
+    "playerName": "레이예스",
+    "teamId": "LT",
+    "backNumber": 29,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50500",
+    "playerName": "황성빈",
+    "teamId": "LT",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69517",
+    "playerName": "고승민",
+    "teamId": "LT",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68205",
+    "playerName": "전민재",
+    "teamId": "LT",
+    "backNumber": 13,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55563",
+    "playerName": "박재엽",
+    "teamId": "LT",
+    "backNumber": 26,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53568",
+    "playerName": "정대선",
+    "teamId": "LT",
+    "backNumber": 4,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55530",
+    "playerName": "박찬형",
+    "teamId": "LT",
+    "backNumber": 60,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55509",
+    "playerName": "박건우",
+    "teamId": "LT",
+    "backNumber": 69,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68525",
+    "playerName": "한동희",
+    "teamId": "LT",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51551",
+    "playerName": "나승엽",
+    "teamId": "LT",
+    "backNumber": 51,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68507",
+    "playerName": "장두성",
+    "teamId": "LT",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52568",
+    "playerName": "한태양",
+    "teamId": "LT",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62802",
+    "playerName": "박승욱",
+    "teamId": "LT",
+    "backNumber": 53,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52591",
+    "playerName": "윤동희",
+    "teamId": "LT",
+    "backNumber": 91,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51528",
+    "playerName": "손성빈",
+    "teamId": "LT",
+    "backNumber": 28,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "61102",
+    "playerName": "유강남",
+    "teamId": "LT",
+    "backNumber": 27,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62931",
+    "playerName": "노진혁",
+    "teamId": "LT",
+    "backNumber": 52,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78513",
+    "playerName": "전준우",
+    "teamId": "LT",
+    "backNumber": 8,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55502",
+    "playerName": "김동현",
+    "teamId": "LT",
+    "backNumber": 64,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69508",
+    "playerName": "신윤후",
+    "teamId": "LT",
+    "backNumber": 3,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50150",
+    "playerName": "손호영",
+    "teamId": "LT",
+    "backNumber": 33,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52514",
+    "playerName": "김세민",
+    "teamId": "LT",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68518",
+    "playerName": "정보근",
+    "teamId": "LT",
+    "backNumber": 42,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62884",
+    "playerName": "최항",
+    "teamId": "LT",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52504",
+    "playerName": "김동혁",
+    "teamId": "LT",
+    "backNumber": 50,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52516",
+    "playerName": "조세진",
+    "teamId": "LT",
+    "backNumber": 12,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "77564",
+    "playerName": "김민성",
+    "teamId": "LT",
+    "backNumber": 16,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54598",
+    "playerName": "이호준",
+    "teamId": "LT",
+    "backNumber": 30,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65522",
+    "playerName": "김강현",
+    "teamId": "LT",
+    "backNumber": 19,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "62528",
+    "playerName": "김원중",
+    "teamId": "LT",
+    "backNumber": 34,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56595",
+    "playerName": "김한홀",
+    "teamId": "LT",
+    "backNumber": 95,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56531",
+    "playerName": "로드리게스",
+    "teamId": "LT",
+    "backNumber": 31,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67588",
+    "playerName": "윤성빈",
+    "teamId": "LT",
+    "backNumber": 55,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56563",
+    "playerName": "이서준",
+    "teamId": "LT",
+    "backNumber": 63,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68529",
+    "playerName": "이승헌",
+    "teamId": "LT",
+    "backNumber": 46,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55534",
+    "playerName": "조민영",
+    "teamId": "LT",
+    "backNumber": 68,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50556",
+    "playerName": "최준용",
+    "teamId": "LT",
+    "backNumber": 56,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68260",
+    "playerName": "현도훈",
+    "teamId": "LT",
+    "backNumber": 17,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51516",
+    "playerName": "김진욱",
+    "teamId": "LT",
+    "backNumber": 15,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67539",
+    "playerName": "나균안",
+    "teamId": "LT",
+    "backNumber": 43,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56523",
+    "playerName": "비슬리",
+    "teamId": "LT",
+    "backNumber": 23,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56567",
+    "playerName": "신동건",
+    "teamId": "LT",
+    "backNumber": 67,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66451",
+    "playerName": "최충연",
+    "teamId": "LT",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66047",
+    "playerName": "박세진",
+    "teamId": "LT",
+    "backNumber": 41,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56540",
+    "playerName": "김한결",
+    "teamId": "LT",
+    "backNumber": 62,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68036",
+    "playerName": "최이준",
+    "teamId": "LT",
+    "backNumber": 49,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56503",
+    "playerName": "이이무라",
+    "teamId": "LT",
+    "backNumber": 39,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56548",
+    "playerName": "쿄야마",
+    "teamId": "LT",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51586",
+    "playerName": "김창훈",
+    "teamId": "LT",
+    "backNumber": 66,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68242",
+    "playerName": "정철원",
+    "teamId": "LT",
+    "backNumber": 65,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63543",
+    "playerName": "구승민",
+    "teamId": "LT",
+    "backNumber": 22,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52530",
+    "playerName": "이민석",
+    "teamId": "LT",
+    "backNumber": 37,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54537",
+    "playerName": "정현수",
+    "teamId": "LT",
+    "backNumber": 57,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53562",
+    "playerName": "이진하",
+    "teamId": "LT",
+    "backNumber": 45,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54503",
+    "playerName": "박준우",
+    "teamId": "LT",
+    "backNumber": 58,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "64021",
+    "playerName": "박세웅",
+    "teamId": "LT",
+    "backNumber": 21,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50596",
+    "playerName": "홍민기",
+    "teamId": "LT",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56536",
+    "playerName": "박정민",
+    "teamId": "LT",
+    "backNumber": 36,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53540",
+    "playerName": "김기준",
+    "teamId": "LT",
+    "backNumber": 47,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55503",
+    "playerName": "이영재",
+    "teamId": "LT",
+    "backNumber": 40,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56554",
+    "playerName": "이준서",
+    "teamId": "LT",
+    "backNumber": 54,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "62947",
+    "playerName": "나성범",
+    "teamId": "HT",
+    "backNumber": 47,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52605",
+    "playerName": "김도영",
+    "teamId": "HT",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55636",
+    "playerName": "박재현",
+    "teamId": "HT",
+    "backNumber": 15,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78603",
+    "playerName": "김선빈",
+    "teamId": "HT",
+    "backNumber": 3,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65653",
+    "playerName": "김호령",
+    "teamId": "HT",
+    "backNumber": 27,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56626",
+    "playerName": "카스트로",
+    "teamId": "HT",
+    "backNumber": 26,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67609",
+    "playerName": "박정우",
+    "teamId": "HT",
+    "backNumber": 1,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62700",
+    "playerName": "하주석",
+    "teamId": "HT",
+    "backNumber": 30,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56637",
+    "playerName": "김민규",
+    "teamId": "HT",
+    "backNumber": 37,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78122",
+    "playerName": "김태군",
+    "teamId": "HT",
+    "backNumber": 42,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68646",
+    "playerName": "한준수",
+    "teamId": "HT",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52634",
+    "playerName": "박상준",
+    "teamId": "HT",
+    "backNumber": 50,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56613",
+    "playerName": "아데를린",
+    "teamId": "HT",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56632",
+    "playerName": "데일",
+    "teamId": "HT",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52628",
+    "playerName": "한승연",
+    "teamId": "HT",
+    "backNumber": 31,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66614",
+    "playerName": "김규성",
+    "teamId": "HT",
+    "backNumber": 14,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69636",
+    "playerName": "오선우",
+    "teamId": "HT",
+    "backNumber": 56,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66354",
+    "playerName": "주효상",
+    "teamId": "HT",
+    "backNumber": 22,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69727",
+    "playerName": "변우혁",
+    "teamId": "HT",
+    "backNumber": 29,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50657",
+    "playerName": "박민",
+    "teamId": "HT",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68504",
+    "playerName": "이호연",
+    "teamId": "HT",
+    "backNumber": 36,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52667",
+    "playerName": "윤도현",
+    "teamId": "HT",
+    "backNumber": 16,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55926",
+    "playerName": "정현창",
+    "teamId": "HT",
+    "backNumber": 12,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "61353",
+    "playerName": "고종욱",
+    "teamId": "HT",
+    "backNumber": 57,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65769",
+    "playerName": "김범수",
+    "teamId": "HT",
+    "backNumber": 49,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54610",
+    "playerName": "성영탁",
+    "teamId": "HT",
+    "backNumber": 65,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55631",
+    "playerName": "엄준현",
+    "teamId": "HT",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51648",
+    "playerName": "이의리",
+    "teamId": "HT",
+    "backNumber": 48,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "64560",
+    "playerName": "이창진",
+    "teamId": "HT",
+    "backNumber": 8,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55267",
+    "playerName": "홍민규",
+    "teamId": "HT",
+    "backNumber": 67,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65610",
+    "playerName": "황대인",
+    "teamId": "HT",
+    "backNumber": 34,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55633",
+    "playerName": "올러",
+    "teamId": "HT",
+    "backNumber": 33,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54640",
+    "playerName": "네일",
+    "teamId": "HT",
+    "backNumber": 40,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56633",
+    "playerName": "지현",
+    "teamId": "HT",
+    "backNumber": 32,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "76225",
+    "playerName": "김건국",
+    "teamId": "HT",
+    "backNumber": 43,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68928",
+    "playerName": "김시훈",
+    "teamId": "HT",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50662",
+    "playerName": "정해영",
+    "teamId": "HT",
+    "backNumber": 62,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52639",
+    "playerName": "최지민",
+    "teamId": "HT",
+    "backNumber": 39,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55610",
+    "playerName": "김태형",
+    "teamId": "HT",
+    "backNumber": 10,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69620",
+    "playerName": "김기훈",
+    "teamId": "HT",
+    "backNumber": 53,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52641",
+    "playerName": "황동하",
+    "teamId": "HT",
+    "backNumber": 41,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54843",
+    "playerName": "시라카와",
+    "teamId": "HT",
+    "backNumber": 63,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50641",
+    "playerName": "장재혁",
+    "teamId": "HT",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51994",
+    "playerName": "한재승",
+    "teamId": "HT",
+    "backNumber": 55,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "77637",
+    "playerName": "양현종",
+    "teamId": "HT",
+    "backNumber": 54,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66609",
+    "playerName": "전상현",
+    "teamId": "HT",
+    "backNumber": 51,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "60768",
+    "playerName": "이태양",
+    "teamId": "HT",
+    "backNumber": 44,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63342",
+    "playerName": "조상우",
+    "teamId": "HT",
+    "backNumber": 11,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53609",
+    "playerName": "곽도규",
+    "teamId": "HT",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69516",
+    "playerName": "김현수",
+    "teamId": "HT",
+    "backNumber": 17,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "61643",
+    "playerName": "홍건희",
+    "teamId": "HT",
+    "backNumber": 52,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54944",
+    "playerName": "데이비슨",
+    "teamId": "WO",
+    "backNumber": 34,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79608",
+    "playerName": "안치홍",
+    "teamId": "WO",
+    "backNumber": 9,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53312",
+    "playerName": "김건희",
+    "teamId": "WO",
+    "backNumber": 12,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78168",
+    "playerName": "서건창",
+    "teamId": "WO",
+    "backNumber": 14,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68362",
+    "playerName": "추재현",
+    "teamId": "WO",
+    "backNumber": 27,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65898",
+    "playerName": "김웅빈",
+    "teamId": "WO",
+    "backNumber": 10,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64346",
+    "playerName": "임병욱",
+    "teamId": "WO",
+    "backNumber": 17,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52348",
+    "playerName": "박찬혁",
+    "teamId": "WO",
+    "backNumber": 43,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56305",
+    "playerName": "히우라",
+    "teamId": "WO",
+    "backNumber": 22,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50167",
+    "playerName": "이주형",
+    "teamId": "WO",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53344",
+    "playerName": "김동헌",
+    "teamId": "WO",
+    "backNumber": 44,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55371",
+    "playerName": "권혁빈",
+    "teamId": "WO",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "76267",
+    "playerName": "최주환",
+    "teamId": "WO",
+    "backNumber": 53,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54394",
+    "playerName": "송지후",
+    "teamId": "WO",
+    "backNumber": 86,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50357",
+    "playerName": "박주홍",
+    "teamId": "WO",
+    "backNumber": 57,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56326",
+    "playerName": "김지석",
+    "teamId": "WO",
+    "backNumber": 26,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55392",
+    "playerName": "어준서",
+    "teamId": "WO",
+    "backNumber": 92,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56322",
+    "playerName": "브룩스",
+    "teamId": "WO",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54303",
+    "playerName": "박채울",
+    "teamId": "WO",
+    "backNumber": 72,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78135",
+    "playerName": "이형종",
+    "teamId": "WO",
+    "backNumber": 36,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64340",
+    "playerName": "임지열",
+    "teamId": "WO",
+    "backNumber": 29,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52305",
+    "playerName": "박수종",
+    "teamId": "WO",
+    "backNumber": 87,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55393",
+    "playerName": "여동욱",
+    "teamId": "WO",
+    "backNumber": 93,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54307",
+    "playerName": "원성준",
+    "teamId": "WO",
+    "backNumber": 33,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78756",
+    "playerName": "오선진",
+    "teamId": "WO",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55397",
+    "playerName": "전태현",
+    "teamId": "WO",
+    "backNumber": 97,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55370",
+    "playerName": "양현종",
+    "teamId": "WO",
+    "backNumber": 60,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64984",
+    "playerName": "김태진",
+    "teamId": "WO",
+    "backNumber": 1,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53305",
+    "playerName": "박성빈",
+    "teamId": "WO",
+    "backNumber": 56,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56304",
+    "playerName": "박한결",
+    "teamId": "WO",
+    "backNumber": 4,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69332",
+    "playerName": "주성원",
+    "teamId": "WO",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56338",
+    "playerName": "최재영",
+    "teamId": "WO",
+    "backNumber": 38,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55339",
+    "playerName": "염승원",
+    "teamId": "WO",
+    "backNumber": 39,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54319",
+    "playerName": "김윤하",
+    "teamId": "WO",
+    "backNumber": 19,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "62332",
+    "playerName": "김재현",
+    "teamId": "WO",
+    "backNumber": 32,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "75125",
+    "playerName": "박병호",
+    "teamId": "WO",
+    "backNumber": 52,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56337",
+    "playerName": "박지성",
+    "teamId": "WO",
+    "backNumber": 37,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "63512",
+    "playerName": "박진형",
+    "teamId": "WO",
+    "backNumber": 40,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51302",
+    "playerName": "이주형",
+    "teamId": "WO",
+    "backNumber": 58,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69360",
+    "playerName": "조영건",
+    "teamId": "WO",
+    "backNumber": 20,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69045",
+    "playerName": "알칸타라",
+    "teamId": "WO",
+    "backNumber": 54,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53164",
+    "playerName": "김동규",
+    "teamId": "WO",
+    "backNumber": 99,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54368",
+    "playerName": "김연주",
+    "teamId": "WO",
+    "backNumber": 68,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55377",
+    "playerName": "정세영",
+    "teamId": "WO",
+    "backNumber": 64,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55301",
+    "playerName": "이준우",
+    "teamId": "WO",
+    "backNumber": 42,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67391",
+    "playerName": "김재웅",
+    "teamId": "WO",
+    "backNumber": 28,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52395",
+    "playerName": "윤석원",
+    "teamId": "WO",
+    "backNumber": 95,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56366",
+    "playerName": "이태양",
+    "teamId": "WO",
+    "backNumber": 66,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56312",
+    "playerName": "최현우",
+    "teamId": "WO",
+    "backNumber": 30,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55313",
+    "playerName": "정현우",
+    "teamId": "WO",
+    "backNumber": 13,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53301",
+    "playerName": "박윤성",
+    "teamId": "WO",
+    "backNumber": 35,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55359",
+    "playerName": "김서준",
+    "teamId": "WO",
+    "backNumber": 59,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56345",
+    "playerName": "정다훈",
+    "teamId": "WO",
+    "backNumber": 45,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51761",
+    "playerName": "배동현",
+    "teamId": "WO",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51301",
+    "playerName": "김성진",
+    "teamId": "WO",
+    "backNumber": 21,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67116",
+    "playerName": "오석주",
+    "teamId": "WO",
+    "backNumber": 31,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56334",
+    "playerName": "와일스",
+    "teamId": "WO",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55394",
+    "playerName": "박정훈",
+    "teamId": "WO",
+    "backNumber": 94,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54362",
+    "playerName": "전준표",
+    "teamId": "WO",
+    "backNumber": 62,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56318",
+    "playerName": "박준현",
+    "teamId": "WO",
+    "backNumber": 18,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55322",
+    "playerName": "로젠버그",
+    "teamId": "WO",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "64350",
+    "playerName": "하영민",
+    "teamId": "WO",
+    "backNumber": 50,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66018",
+    "playerName": "김선기",
+    "teamId": "WO",
+    "backNumber": 49,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68341",
+    "playerName": "안우진",
+    "teamId": "WO",
+    "backNumber": 41,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56348",
+    "playerName": "유토",
+    "teamId": "WO",
+    "backNumber": 48,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "76118",
+    "playerName": "원종현",
+    "teamId": "WO",
+    "backNumber": 46,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67828",
+    "playerName": "김성민",
+    "teamId": "WO",
+    "backNumber": 8,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67893",
+    "playerName": "박성한",
+    "teamId": "SK",
+    "backNumber": 2,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53827",
+    "playerName": "에레디아",
+    "teamId": "SK",
+    "backNumber": 27,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54812",
+    "playerName": "정준재",
+    "teamId": "SK",
+    "backNumber": 3,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50854",
+    "playerName": "최지훈",
+    "teamId": "SK",
+    "backNumber": 54,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78224",
+    "playerName": "김재환",
+    "teamId": "SK",
+    "backNumber": 32,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52804",
+    "playerName": "석정우",
+    "teamId": "SK",
+    "backNumber": 52,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "75847",
+    "playerName": "최정",
+    "teamId": "SK",
+    "backNumber": 14,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51868",
+    "playerName": "고명준",
+    "teamId": "SK",
+    "backNumber": 18,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50820",
+    "playerName": "전의산",
+    "teamId": "SK",
+    "backNumber": 47,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62934",
+    "playerName": "김성욱",
+    "teamId": "SK",
+    "backNumber": 31,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66864",
+    "playerName": "안상현",
+    "teamId": "SK",
+    "backNumber": 10,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69804",
+    "playerName": "채현우",
+    "teamId": "SK",
+    "backNumber": 15,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51865",
+    "playerName": "조형우",
+    "teamId": "SK",
+    "backNumber": 20,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55897",
+    "playerName": "홍대인",
+    "teamId": "SK",
+    "backNumber": 97,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79456",
+    "playerName": "이지영",
+    "teamId": "SK",
+    "backNumber": 56,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68868",
+    "playerName": "최준우",
+    "teamId": "SK",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "60558",
+    "playerName": "오태곤",
+    "teamId": "SK",
+    "backNumber": 37,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52807",
+    "playerName": "임근우",
+    "teamId": "SK",
+    "backNumber": 63,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55894",
+    "playerName": "최윤석",
+    "teamId": "SK",
+    "backNumber": 65,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62895",
+    "playerName": "한유섬",
+    "teamId": "SK",
+    "backNumber": 35,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66662",
+    "playerName": "신범수",
+    "teamId": "SK",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50868",
+    "playerName": "류효승",
+    "teamId": "SK",
+    "backNumber": 45,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56813",
+    "playerName": "마드리스",
+    "teamId": "SK",
+    "backNumber": 13,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "62864",
+    "playerName": "김민식",
+    "teamId": "SK",
+    "backNumber": 24,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53865",
+    "playerName": "김정민",
+    "teamId": "SK",
+    "backNumber": 48,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53893",
+    "playerName": "김민준",
+    "teamId": "SK",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69825",
+    "playerName": "김창평",
+    "teamId": "SK",
+    "backNumber": 64,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "73211",
+    "playerName": "노경은",
+    "teamId": "SK",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50812",
+    "playerName": "박시후",
+    "teamId": "SK",
+    "backNumber": 57,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "54808",
+    "playerName": "변건우",
+    "teamId": "SK",
+    "backNumber": 68,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "64861",
+    "playerName": "이건욱",
+    "teamId": "SK",
+    "backNumber": 16,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52868",
+    "playerName": "이기순",
+    "teamId": "SK",
+    "backNumber": 4,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53892",
+    "playerName": "이로운",
+    "teamId": "SK",
+    "backNumber": 92,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52809",
+    "playerName": "전영준",
+    "teamId": "SK",
+    "backNumber": 28,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51897",
+    "playerName": "조병현",
+    "teamId": "SK",
+    "backNumber": 19,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65343",
+    "playerName": "김택형",
+    "teamId": "SK",
+    "backNumber": 43,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56808",
+    "playerName": "신상연",
+    "teamId": "SK",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56800",
+    "playerName": "긴지로",
+    "teamId": "SK",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69839",
+    "playerName": "백승건",
+    "teamId": "SK",
+    "backNumber": 59,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51895",
+    "playerName": "장지훈",
+    "teamId": "SK",
+    "backNumber": 21,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52844",
+    "playerName": "김도현",
+    "teamId": "SK",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56823",
+    "playerName": "타케다",
+    "teamId": "SK",
+    "backNumber": 23,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51867",
+    "playerName": "김건우",
+    "teamId": "SK",
+    "backNumber": 39,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56841",
+    "playerName": "베니지아노",
+    "teamId": "SK",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56855",
+    "playerName": "해치",
+    "teamId": "SK",
+    "backNumber": 55,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51702",
+    "playerName": "이준기",
+    "teamId": "SK",
+    "backNumber": 90,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50650",
+    "playerName": "최용준",
+    "teamId": "SK",
+    "backNumber": 67,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68092",
+    "playerName": "한두솔",
+    "teamId": "SK",
+    "backNumber": 34,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68856",
+    "playerName": "최민준",
+    "teamId": "SK",
+    "backNumber": 30,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "68043",
+    "playerName": "김민",
+    "teamId": "SK",
+    "backNumber": 1,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55855",
+    "playerName": "화이트",
+    "teamId": "SK",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "61895",
+    "playerName": "서진용",
+    "teamId": "SK",
+    "backNumber": 22,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66858",
+    "playerName": "정동윤",
+    "teamId": "SK",
+    "backNumber": 51,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56840",
+    "playerName": "김민준",
+    "teamId": "SK",
+    "backNumber": 40,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "62869",
+    "playerName": "문승원",
+    "teamId": "SK",
+    "backNumber": 42,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56801",
+    "playerName": "아빌라",
+    "teamId": "SK",
+    "backNumber": 33,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "66606",
+    "playerName": "최원준",
+    "teamId": "KT",
+    "backNumber": 3,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56034",
+    "playerName": "힐리어드",
+    "teamId": "KT",
+    "backNumber": 34,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79402",
+    "playerName": "김상수",
+    "teamId": "KT",
+    "backNumber": 7,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "76290",
+    "playerName": "김현수",
+    "teamId": "KT",
+    "backNumber": 10,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50901",
+    "playerName": "안인산",
+    "teamId": "KT",
+    "backNumber": 50,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "79240",
+    "playerName": "허경민",
+    "teamId": "KT",
+    "backNumber": 13,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67644",
+    "playerName": "이정훈",
+    "teamId": "KT",
+    "backNumber": 33,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64004",
+    "playerName": "김민혁",
+    "teamId": "KT",
+    "backNumber": 53,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51013",
+    "playerName": "유준규",
+    "teamId": "KT",
+    "backNumber": 67,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "52001",
+    "playerName": "안현민",
+    "teamId": "KT",
+    "backNumber": 23,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "53036",
+    "playerName": "류현인",
+    "teamId": "KT",
+    "backNumber": 9,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56005",
+    "playerName": "이재원",
+    "teamId": "KT",
+    "backNumber": 65,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64504",
+    "playerName": "오윤석",
+    "teamId": "KT",
+    "backNumber": 4,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "51003",
+    "playerName": "권동진",
+    "teamId": "KT",
+    "backNumber": 52,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "69064",
+    "playerName": "강민성",
+    "teamId": "KT",
+    "backNumber": 5,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "66706",
+    "playerName": "장진혁",
+    "teamId": "KT",
+    "backNumber": 51,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "68089",
+    "playerName": "조대현",
+    "teamId": "KT",
+    "backNumber": 42,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "67807",
+    "playerName": "이정범",
+    "teamId": "KT",
+    "backNumber": 0,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "63722",
+    "playerName": "한승택",
+    "teamId": "KT",
+    "backNumber": 45,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64166",
+    "playerName": "배정대",
+    "teamId": "KT",
+    "backNumber": 27,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "64115",
+    "playerName": "장준원",
+    "teamId": "KT",
+    "backNumber": 56,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "78548",
+    "playerName": "장성우",
+    "teamId": "KT",
+    "backNumber": 22,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "56006",
+    "playerName": "이강민",
+    "teamId": "KT",
+    "backNumber": 6,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "50066",
+    "playerName": "강현우",
+    "teamId": "KT",
+    "backNumber": 55,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "54097",
+    "playerName": "김민석",
+    "teamId": "KT",
+    "backNumber": 44,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65048",
+    "playerName": "김민수",
+    "teamId": "KT",
+    "backNumber": 26,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53029",
+    "playerName": "김정운",
+    "teamId": "KT",
+    "backNumber": 61,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "52060",
+    "playerName": "박영현",
+    "teamId": "KT",
+    "backNumber": 60,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67006",
+    "playerName": "안치영",
+    "teamId": "KT",
+    "backNumber": 8,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "55005",
+    "playerName": "오서진",
+    "teamId": "KT",
+    "backNumber": 25,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "73117",
+    "playerName": "우규민",
+    "teamId": "KT",
+    "backNumber": 12,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69047",
+    "playerName": "전용주",
+    "teamId": "KT",
+    "backNumber": 29,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "53058",
+    "playerName": "정준영",
+    "teamId": "KT",
+    "backNumber": 58,
+    "playerType": "HITTER"
+  },
+  {
+    "playerId": "65060",
+    "playerName": "주권",
+    "teamId": "KT",
+    "backNumber": 38,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "64001",
+    "playerName": "고영표",
+    "teamId": "KT",
+    "backNumber": 1,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56066",
+    "playerName": "박지훈",
+    "teamId": "KT",
+    "backNumber": 66,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69113",
+    "playerName": "임준형",
+    "teamId": "KT",
+    "backNumber": 14,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50726",
+    "playerName": "한승주",
+    "teamId": "KT",
+    "backNumber": 59,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67419",
+    "playerName": "문용익",
+    "teamId": "KT",
+    "backNumber": 18,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "51058",
+    "playerName": "한차현",
+    "teamId": "KT",
+    "backNumber": 2,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69054",
+    "playerName": "이상동",
+    "teamId": "KT",
+    "backNumber": 37,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "61666",
+    "playerName": "한승혁",
+    "teamId": "KT",
+    "backNumber": 35,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50859",
+    "playerName": "오원석",
+    "teamId": "KT",
+    "backNumber": 47,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56011",
+    "playerName": "스기모토",
+    "teamId": "KT",
+    "backNumber": 11,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56032",
+    "playerName": "사우어",
+    "teamId": "KT",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "65516",
+    "playerName": "배제성",
+    "teamId": "KT",
+    "backNumber": 19,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "67048",
+    "playerName": "이정현",
+    "teamId": "KT",
+    "backNumber": 21,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56002",
+    "playerName": "대니엘",
+    "teamId": "KT",
+    "backNumber": 36,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "69041",
+    "playerName": "손동현",
+    "teamId": "KT",
+    "backNumber": 41,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "55912",
+    "playerName": "로건",
+    "teamId": "KT",
+    "backNumber": 43,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "56036",
+    "playerName": "보쉴리",
+    "teamId": "KT",
+    "backNumber": 0,
+    "playerType": "PITCHER"
+  },
+  {
+    "playerId": "50030",
+    "playerName": "소형준",
+    "teamId": "KT",
+    "backNumber": 30,
+    "playerType": "PITCHER"
+  }
+]
