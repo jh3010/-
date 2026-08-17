@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
 # 1. 폰트 설정 (서버 환경 고려)
-font_path = os.path.join(os.path.dirname(__file__), 'NanumGothic.ttf')
+font_path = os.path.join(os.path.dirname(__file__), 'GOTHIC.TTF')
 
 if os.path.exists(font_path):
     fm.fontManager.addfont(font_path)
