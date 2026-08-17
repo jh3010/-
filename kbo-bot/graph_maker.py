@@ -46,7 +46,7 @@ def make_starter_comparison_chart(report: dict) -> io.BytesIO:
     ]
 
     fig, axes = plt.subplots(1, 3, figsize=(9, 3.5))
-    fig.suptitle(f"선발투수 비교: {away_name} vs {home_name}", fontsize=13, fontweight="bold")
+    fig.suptitle(f"선발투수 비교: {away_name} vs {home_name}", fontsize=13)
 
     colors = ["#4A90D9", "#D94A4A"]
 
@@ -88,7 +88,7 @@ def make_recent_games_chart(report: dict) -> io.BytesIO:
 
         ax.plot(dates, runs, marker="o", label=team_name, color=color, linewidth=2)
 
-    ax.set_title("최근 5경기 득점 흐름", fontsize=13, fontweight="bold")
+    ax.set_title("최근 5경기 득점 흐름", fontsize=13)
     ax.set_ylabel("득점")
     ax.legend()
     ax.grid(alpha=0.3)
